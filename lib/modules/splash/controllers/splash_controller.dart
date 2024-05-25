@@ -1,4 +1,4 @@
-import 'package:flutter_house_reservation/modules/main/pages/main_page.dart';
+import 'package:flutter_house_reservation/modules/splash/pages/on_boarding_page.dart';
 import 'package:get/get.dart';
 
 class SplashController extends GetxController {
@@ -7,7 +7,7 @@ class SplashController extends GetxController {
 //======================================== Functions ===========================
   Future<void> _navigateToMainScreen() async {
     await Future.delayed(3.seconds);
-    Get.offAll(const MainPage());
+    Get.offAll(const OnBoardingPage());
   }
 
   @override
