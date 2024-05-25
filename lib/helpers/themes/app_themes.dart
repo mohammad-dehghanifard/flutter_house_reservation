@@ -14,7 +14,8 @@ class AppThemes {
       primaryContainer: AppColors.darkSecondary
     ),
     textTheme: TextTheme(
-      bodyMedium: TextStyle(color: AppColors.darkSecondary,fontSize: 14.sp)
+      bodyMedium: TextStyle(color: AppColors.darkSecondary,fontSize: 14.sp),
+      bodySmall: TextStyle(color: AppColors.darkSecondary,fontSize: 10.sp),
     )
   );
 }
