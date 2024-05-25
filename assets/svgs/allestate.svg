@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="16.022" height="16" viewBox="0 0 16.022 16">
+  <g id="Icon_16x_All_estate" data-name="Icon/16x/All estate" transform="translate(0.022)">
+    <g id="Frame" transform="translate(0 2)">
+      <path id="Vector" d="M0,0H8.788V12.356H0Z" transform="translate(0.522 0.522)" fill="none" stroke="#3845ab" stroke-width="1.088"/>
+      <path id="Vector-2" data-name="Vector" d="M0,2.262,3.045,0,5.917,2.262V7.744H0Z" transform="translate(9.397 5.134)" fill="none" stroke="#3845ab" stroke-width="1.088"/>
+      <g id="Group">
+        <path id="Vector-3" data-name="Vector" d="M0,0V1.914" transform="translate(3.394 2.436)" fill="none" stroke="#3845ab" stroke-width="1.088"/>
+        <path id="Vector-4" data-name="Vector" d="M0,0V1.914" transform="translate(6.352 2.436)" fill="none" stroke="#3845ab" stroke-width="1.088"/>
+      </g>
+      <g id="Group-2" data-name="Group">
+        <path id="Vector-5" data-name="Vector" d="M0,0V1.914" transform="translate(3.394 6.7)" fill="none" stroke="#3845ab" stroke-width="1.088"/>
+        <path id="Vector-6" data-name="Vector" d="M0,0V1.914" transform="translate(6.352 6.7)" fill="none" stroke="#3845ab" stroke-width="1.088"/>
+      </g>
+      <g id="Group-3" data-name="Group">
+        <path id="Vector-7" data-name="Vector" d="M0,0V2.871" transform="translate(12.356 9.919)" fill="none" stroke="#3845ab" stroke-width="1.088"/>
+      </g>
+    </g>
+  </g>
+</svg>
