@@ -1,14 +1,11 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_house_reservation/backend/models/on_boarding_model.dart';
 import 'package:flutter_house_reservation/fake_data.dart';
-import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_strings.dart';
 import 'package:flutter_house_reservation/helpers/widgets/custom_button_widget.dart';
-import 'package:flutter_house_reservation/helpers/widgets/custom_divider.dart';
 import 'package:flutter_house_reservation/modules/splash/controllers/on_boarding_controller.dart';
 import 'package:flutter_house_reservation/modules/splash/widgets/on_boarding_page_indicator_widget.dart';
+import 'package:flutter_house_reservation/modules/splash/widgets/on_boarding_widget.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
@@ -32,39 +29,7 @@ class OnBoardingPage extends StatelessWidget {
                       onPageChanged: buildController.onChangePage,
                       itemBuilder: (context, index) {
                         final OnBoardingModel item = FakeData.onBoardingItems[index];
-                        return Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            // image
-                            Container(
-                              width: double.infinity,
-                              height: 60.h,
-                              decoration: BoxDecoration(
-                                image: DecorationImage(
-                                  image: AssetImage(item.imagePath!),
-                                  fit: BoxFit.cover
-                                )
-                              ),
-                            ),
-                            // content
-                            Padding(
-                              padding: const EdgeInsets.all(25.0),
-                              child: Column(
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  // title
-                                  Text(item.title!,style: context.textTheme.titleLarge),
-                                  SizedBox(height: 1.h),
-                                  const CustomDivider(),
-                                  // description
-                                  SizedBox(height: 4.h),
-                                  Text(item.description!,style: context.textTheme.bodySmall!.apply(heightDelta: 0.5)),
-
-                                ],
-                              ),
-                            )
-                          ],
-                        );
+                        return OnBoardingWidget(item: item);
                       },),
                 ),
                 //indicator
@@ -75,8 +40,11 @@ class OnBoardingPage extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      CustomButtonWidget(onTap: () => buildController.changePage(),text: AppStrings.next,),
+                      CustomButtonWidget(
+                        onTap: () => buildController.changePage(),
+                        text: buildController.selectedPage == 2? AppStrings.lestGo : AppStrings.next),
                       SizedBox(width: 4.w),
+                      // back button
                       Visibility(
                         visible: buildController.selectedPage > 0,
                           maintainAnimation: true,
@@ -101,5 +69,7 @@ class OnBoardingPage extends StatelessWidget {
     );
   }
 }
+
+
 
 
