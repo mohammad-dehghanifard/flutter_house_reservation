@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_house_reservation/backend/models/on_boarding_model.dart';
 import 'package:flutter_house_reservation/fake_data.dart';
+import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_strings.dart';
 import 'package:flutter_house_reservation/helpers/widgets/custom_button_widget.dart';
 import 'package:flutter_house_reservation/helpers/widgets/custom_divider.dart';
@@ -50,6 +51,7 @@ class OnBoardingPage extends StatelessWidget {
                               // description
                               SizedBox(height: 4.h),
                               Text(item.description!,style: context.textTheme.bodySmall!.apply(heightDelta: 0.5)),
+
                             ],
                           ),
                         )
@@ -57,7 +59,23 @@ class OnBoardingPage extends StatelessWidget {
                     );
                   },),
             ),
-             Padding(
+            //indicator
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: List.generate(FakeData.onBoardingItems.length, (index) => Container(
+                width: 3.w,
+                height: 3.h,
+                margin: EdgeInsets.only(
+                  right: 2.w,
+                ),
+                decoration: const BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: AppColors.lightBlue
+                ),
+              )),
+            ),
+            // buttons
+            Padding(
               padding: const EdgeInsets.all(25.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
