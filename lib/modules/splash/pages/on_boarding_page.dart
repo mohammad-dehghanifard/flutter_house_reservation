@@ -8,6 +8,7 @@ import 'package:flutter_house_reservation/helpers/constants/app_strings.dart';
 import 'package:flutter_house_reservation/helpers/widgets/custom_button_widget.dart';
 import 'package:flutter_house_reservation/helpers/widgets/custom_divider.dart';
 import 'package:flutter_house_reservation/modules/splash/controllers/on_boarding_controller.dart';
+import 'package:flutter_house_reservation/modules/splash/widgets/on_boarding_page_indicator_widget.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
@@ -67,22 +68,7 @@ class OnBoardingPage extends StatelessWidget {
                       },),
                 ),
                 //indicator
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: List.generate(FakeData.onBoardingItems.length, (index) {
-                    return Container(
-                    width: 3.w,
-                    height: 3.h,
-                    margin: EdgeInsets.only(
-                      right: 2.w,
-                    ),
-                    decoration:  BoxDecoration(
-                        shape: BoxShape.circle,
-                        color: buildController.selectedPage == index? AppColors.primary :AppColors.lightBlue
-                    ),
-                                      );
-                  }),
-                ),
+                const OnBoardingPageIndicatorWidget(),
                 // buttons
                 Padding(
                   padding: const EdgeInsets.all(25.0),
@@ -115,3 +101,5 @@ class OnBoardingPage extends StatelessWidget {
     );
   }
 }
+
+
