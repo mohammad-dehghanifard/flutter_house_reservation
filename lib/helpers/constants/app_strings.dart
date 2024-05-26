@@ -7,6 +7,7 @@ class AppStrings {
   static const phoneNumberLabel = 'شماره همراه';
   static const sendOtpCode = 'ارسال کد';
   static const acceptOtpCode = 'تایید کد';
+  static const inputAcceptOtpCode = 'کد ارسال شده را وارد کنید';
   static const inputOtpCodeMessage = 'لطفا کد تایید ارسال شده را وارد کنید.';
   static const resendCode = 'ارسال مجدد در: ';
   static const lestGo = 'بزن بریم!';
