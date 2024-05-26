@@ -3,10 +3,11 @@ import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_strings.dart';
 import 'package:flutter_house_reservation/helpers/constants/assets.dart';
 import 'package:flutter_house_reservation/helpers/widgets/custom_button_widget.dart';
-import 'package:flutter_house_reservation/helpers/widgets/custom_text_button.dart';
+import 'package:flutter_house_reservation/helpers/widgets/custom_text_field.dart';
 import 'package:flutter_house_reservation/modules/auth/controllers/auth_controller.dart';
 import 'package:flutter_house_reservation/modules/auth/widgets/confirm_otp_widget.dart';
-import 'package:flutter_house_reservation/modules/auth/widgets/otp_text_field_widget.dart';
+import 'package:flutter_house_reservation/modules/auth/widgets/register_widget.dart';
+import 'package:flutter_house_reservation/modules/auth/widgets/send_otp_widget.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
@@ -39,13 +40,19 @@ class AuthPage extends StatelessWidget {
                         margin: EdgeInsets.only(top: 2.h),
                         padding: const EdgeInsets.all(25.0),
                         width: double.infinity,
-                        height: 40.h,
+                        height: 45.h,
                         decoration: BoxDecoration(
                           color: AppColors.white,
                           borderRadius: BorderRadius.circular(4.h)
                         ),
-                        child: ConfirmOtpWidget(),
-                      )
+                          child:
+                              buildController.pageType == AuthPageType.sendOtp
+                                  ? const SendOtpWidget()
+                                  : buildController.pageType ==
+                                          AuthPageType.confirmOtp
+                                      ? const ConfirmOtpWidget()
+                                      : const RegisterWidget(),
+                        )
                     ],
                   ),
                 ),
@@ -66,6 +73,8 @@ class AuthPage extends StatelessWidget {
     );
   }
 }
+
+
 
 
 

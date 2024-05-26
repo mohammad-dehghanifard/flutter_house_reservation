@@ -34,7 +34,7 @@ class ConfirmOtpWidget extends StatelessWidget {
                 ],
               ),
               const Spacer(),
-              CustomButtonWidget(onTap: () {buildController.startTimer();}, text: AppStrings.acceptOtpCode)
+              CustomButtonWidget(onTap: () => buildController.changePageState(), text: AppStrings.acceptOtpCode)
             ],
           );
         }
