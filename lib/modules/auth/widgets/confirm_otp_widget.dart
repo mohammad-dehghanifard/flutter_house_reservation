@@ -19,7 +19,7 @@ class ConfirmOtpWidget extends StatelessWidget {
           return Column(
             children: [
               Text(AppStrings.inputOtpCodeMessage,style: context.textTheme.bodySmall),
-              SizedBox(height: 4.h),
+              SizedBox(height: 6.h),
               const OtpTextFieldWidget(),
               SizedBox(height: 2.h),
               // timer
