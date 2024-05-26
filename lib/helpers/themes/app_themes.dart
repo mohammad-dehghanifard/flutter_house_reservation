@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
-import 'package:sizer/sizer.dart';
 
 class AppThemes {
   AppThemes._();
@@ -14,10 +13,10 @@ class AppThemes {
       primaryContainer: AppColors.darkSecondary
     ),
     textTheme: TextTheme(
-      bodyMedium: TextStyle(color: AppColors.darkSecondary,fontSize: 14.sp),
-      bodySmall: TextStyle(color: AppColors.darkSecondary,fontSize: 10.sp),
-      titleLarge: TextStyle(color: AppColors.primary,fontWeight: FontWeight.w700,fontSize: 18.sp),
-      titleMedium: TextStyle(color: AppColors.darkSecondary,fontSize: 14.sp,fontWeight: FontWeight.w700),
+      bodyMedium: TextStyle(color: AppColors.darkSecondary,fontSize: 16),
+      bodySmall: TextStyle(color: AppColors.darkSecondary,fontSize: 14),
+      titleLarge: TextStyle(color: AppColors.primary,fontWeight: FontWeight.w700,fontSize: 24),
+      titleMedium: TextStyle(color: AppColors.darkSecondary,fontSize: 18,fontWeight: FontWeight.w700),
     )
   );
 }

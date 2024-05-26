@@ -5,7 +5,7 @@ import 'package:flutter_house_reservation/modules/auth/controllers/auth_controll
 import 'package:flutter_house_reservation/modules/auth/widgets/auth_container_widget.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AuthPage extends StatelessWidget {
   const AuthPage({super.key});
@@ -29,7 +29,7 @@ class AuthPage extends StatelessWidget {
                     children: [
                       // logo
                       SvgPicture.asset(Assets.logo),
-                      SizedBox(height: 2.h),
+                      SizedBox(height: 16.h),
                       // show widgets
                       const AuthContainer()
                     ],

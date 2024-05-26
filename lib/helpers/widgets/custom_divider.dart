@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 
 class CustomDivider extends StatelessWidget {
-  const CustomDivider({super.key,  this.width = 64,  this.height = 0.2});
+  const CustomDivider({super.key,  this.width = 128,  this.height = 1});
   final double width,height;
   @override
   Widget build(BuildContext context) {

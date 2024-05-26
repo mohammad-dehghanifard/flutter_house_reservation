@@ -8,7 +8,7 @@ import 'package:flutter_house_reservation/modules/splash/controllers/on_boarding
 import 'package:flutter_house_reservation/modules/splash/widgets/on_boarding_page_indicator_widget.dart';
 import 'package:flutter_house_reservation/modules/splash/widgets/on_boarding_widget.dart';
 import 'package:get/get.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnBoardingPage extends StatelessWidget {
   const OnBoardingPage({super.key});

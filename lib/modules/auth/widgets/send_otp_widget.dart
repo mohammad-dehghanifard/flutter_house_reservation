@@ -4,7 +4,7 @@ import 'package:flutter_house_reservation/helpers/widgets/custom_button_widget.d
 import 'package:flutter_house_reservation/helpers/widgets/custom_text_field.dart';
 import 'package:flutter_house_reservation/modules/auth/controllers/auth_controller.dart';
 import 'package:get/get.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SendOtpWidget extends StatelessWidget {
   const SendOtpWidget({
@@ -18,7 +18,7 @@ class SendOtpWidget extends StatelessWidget {
         return Column(
           children: [
             Text(AppStrings.sendSmsMessage,style: context.textTheme.bodySmall),
-            SizedBox(height: 4.h),
+            SizedBox(height: 32.h),
             const CustomTextField(
               label: AppStrings.phoneNumberLabel,
               hint: AppStrings.inputPhoneHint,

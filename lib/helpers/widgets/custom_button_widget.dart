@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
-import 'package:sizer/sizer.dart';
 
 class CustomButtonWidget extends StatelessWidget {
   const CustomButtonWidget(
@@ -22,9 +22,9 @@ class CustomButtonWidget extends StatelessWidget {
                         ? AppColors.whiteSecondary
                         : AppColors.secondary),
             elevation: const MaterialStatePropertyAll(0),
-            minimumSize: MaterialStatePropertyAll(Size(36.w, 6.h)),
+            minimumSize: MaterialStatePropertyAll(Size(100.w, 36.h)),
             shape: MaterialStatePropertyAll(RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(3.w)))),
+                borderRadius: BorderRadius.circular(8.w)))),
         onPressed: onTap,
         child: Text(
           text,

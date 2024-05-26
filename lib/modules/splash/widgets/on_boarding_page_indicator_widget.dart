@@ -3,7 +3,7 @@ import 'package:flutter_house_reservation/fake_data.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
 import 'package:flutter_house_reservation/modules/splash/controllers/on_boarding_controller.dart';
 import 'package:get/get.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnBoardingPageIndicatorWidget extends StatelessWidget {
   const OnBoardingPageIndicatorWidget({
@@ -19,8 +19,8 @@ class OnBoardingPageIndicatorWidget extends StatelessWidget {
           final selected = buildController.selectedPage == index;
           return AnimatedContainer(
             duration: 350.milliseconds,
-            width: !selected ? 3.w : 8.w,
-            height: !selected ? 3.w : 2.w,
+            width: !selected ? 12.w : 24.w,
+            height: !selected ? 12.w : 6.w,
             margin: EdgeInsets.only(
               right: 2.w,
             ),

@@ -5,7 +5,7 @@ import 'package:flutter_house_reservation/helpers/widgets/custom_text_button.dar
 import 'package:flutter_house_reservation/modules/auth/controllers/auth_controller.dart';
 import 'package:flutter_house_reservation/modules/auth/widgets/otp_text_field_widget.dart';
 import 'package:get/get.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ConfirmOtpWidget extends StatelessWidget {
   const ConfirmOtpWidget({
@@ -19,9 +19,9 @@ class ConfirmOtpWidget extends StatelessWidget {
           return Column(
             children: [
               Text(AppStrings.inputOtpCodeMessage,style: context.textTheme.bodySmall),
-              SizedBox(height: 6.h),
+              SizedBox(height: 32.h),
               const OtpTextFieldWidget(),
-              SizedBox(height: 2.h),
+              SizedBox(height: 12.h),
               // timer
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,

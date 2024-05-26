@@ -16,7 +16,7 @@ class AuthController extends GetxController {
    }
 
    void resetTimer() {
-      resendOtpTime = 12;
+      resendOtpTime = 18;
       startTimer();
    }
 

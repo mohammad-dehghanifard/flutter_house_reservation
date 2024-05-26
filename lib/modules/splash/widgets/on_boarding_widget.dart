@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_house_reservation/backend/models/on_boarding_model.dart';
 import 'package:flutter_house_reservation/helpers/widgets/custom_divider.dart';
 import 'package:get/get.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class OnBoardingWidget extends StatelessWidget {
   const OnBoardingWidget({
@@ -20,7 +20,8 @@ class OnBoardingWidget extends StatelessWidget {
         // image
         Container(
           width: double.infinity,
-          height: 60.h,
+
+          height: 430.h,
           decoration: BoxDecoration(
               image: DecorationImage(
                   image: AssetImage(item.imagePath!),
@@ -36,7 +37,7 @@ class OnBoardingWidget extends StatelessWidget {
             children: [
               // title
               Text(item.title!,style: context.textTheme.titleLarge),
-              SizedBox(height: 1.h),
+              SizedBox(height: 2.h),
               const CustomDivider(),
               // description
               SizedBox(height: 4.h),

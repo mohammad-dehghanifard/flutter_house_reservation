@@ -6,7 +6,7 @@ import 'package:flutter_house_reservation/modules/splash/controllers/splash_cont
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
-import 'package:sizer/sizer.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SplashPage extends StatelessWidget {
   const SplashPage({super.key});
@@ -30,9 +30,9 @@ class SplashPage extends StatelessWidget {
                     const Spacer(),
                     // LOGO
                     SvgPicture.asset(Assets.logo),
-                    SizedBox(height: 2.h),
+                    SizedBox(height: 12.h),
                     // loading
-                    LoadingAnimationWidget.stretchedDots(color: AppColors.secondary, size: 8.h),
+                    LoadingAnimationWidget.stretchedDots(color: AppColors.secondary, size: 32.h),
                     const Spacer(),
                     Text(AppStrings.appVersion,style: context.textTheme.bodySmall!.apply(color: AppColors.secondary))
                   ],
