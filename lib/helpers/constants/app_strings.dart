@@ -9,7 +9,8 @@ class AppStrings {
   static const acceptOtpCode = 'تایید کد';
   static const inputAcceptOtpCode = 'کد ارسال شده را وارد کنید';
   static const inputOtpCodeMessage = 'لطفا کد تایید ارسال شده را وارد کنید.';
-  static const resendCode = 'ارسال مجدد در: ';
+  static const resendCodeMessage = 'ارسال مجدد در: ';
+  static const resendCode = 'ارسال مجدد ';
   static const lestGo = 'بزن بریم!';
   static const previous = 'قبلی';
   static const sendSmsMessage = 'لظفا شماره تلفن خود را جهت دریافت کد تایید وارد کنید.';
