@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
               locale: const Locale("fa"),
               title: AppStrings.appName,
               theme: AppThemes.darkTheme,
-              home: const OnBoardingPage(),
+              home: const SplashPage(),
             ));
       },
     );
