@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppBarContainerWidget extends StatelessWidget {
   const AppBarContainerWidget({
-    super.key,  this.height = 160, required this.child,
+    super.key,  this.height = 150, required this.child,
   });
   final double height;
   final Widget child;
@@ -16,7 +16,7 @@ class AppBarContainerWidget extends StatelessWidget {
         decoration:  BoxDecoration(
             color: AppColors.darkScaffoldBackGroundColor,
             borderRadius: BorderRadius.only(
-                bottomLeft: Radius.circular(60.r)
+                bottomLeft: Radius.circular(40.r),
             )
         ),
         child: child
