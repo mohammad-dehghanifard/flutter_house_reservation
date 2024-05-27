@@ -25,7 +25,7 @@ class AuthContainer extends StatelessWidget {
               : const RegisterWidget();
 
           return AnimatedContainer(
-              duration: const Duration(milliseconds: 250),
+              duration: const Duration(milliseconds: 50),
               margin: EdgeInsets.only(top: 12.h),
               padding: const EdgeInsets.all(25.0),
               width: double.infinity,
@@ -39,7 +39,10 @@ class AuthContainer extends StatelessWidget {
                   color: AppColors.white,
                   borderRadius: BorderRadius.circular(12.r)
               ),
-              child: child
+              child: AnimatedSwitcher(
+                duration: const Duration(seconds: 1),
+                child: child,
+              )
 
           );
         }
