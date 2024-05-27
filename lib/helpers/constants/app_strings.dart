@@ -4,6 +4,7 @@ class AppStrings {
   static const appName = 'Rentee';
   static const next = 'بعدی';
   static const inputPhoneHint = 'شماره تماس...';
+  static const searchHint = 'متن جست و جو را وارد کنید...';
   static const phoneNumberLabel = 'شماره همراه';
   static const fullNameLabel = 'نام و نام خانوادگی';
   static const usernameLabel = 'نام کاربری';
