@@ -1,4 +1,5 @@
-import 'dart:ui';
+
+import 'package:flutter/material.dart';
 
 class AppColors {
   AppColors._();
@@ -15,4 +16,13 @@ class AppColors {
   static const lightBlue = Color(0xFFE7F1FF);
   static const blue = Color(0xFF82A4D0);
   static const lightGreyText = Color(0xFF78829D);
+}
+
+class AppGradiant{
+  AppGradiant._();
+  static var sliderGradiant = [
+    AppColors.darkScaffoldBackGroundColor,
+    AppColors.darkScaffoldBackGroundColor.withOpacity(0.80),
+    Colors.transparent
+  ];
 }
