@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:flutter_house_reservation/helpers/constants/controllers_build_id.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
@@ -8,7 +8,7 @@ class HomeController extends GetxController {
 //======================================== Functions ===========================
   void changeHomeData(HomePageDataType? value) {
     selectedHomeDataType = value ?? HomePageDataType.all;
-    update(["segmented"]);
+    update([ControllersBuildId.homeSegmentedButton]);
   }
 
 }
