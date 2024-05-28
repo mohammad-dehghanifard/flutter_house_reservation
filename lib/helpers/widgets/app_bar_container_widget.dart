@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppBarContainerWidget extends StatelessWidget {
   const AppBarContainerWidget({
-    super.key,  this.height = 150, required this.child,
+    super.key,  this.height = 140, required this.child,
   });
   final double height;
   final Widget child;
