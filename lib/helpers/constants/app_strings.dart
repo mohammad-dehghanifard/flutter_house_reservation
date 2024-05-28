@@ -18,6 +18,7 @@ class AppStrings {
   static const previous = 'قبلی';
   static const register = 'ثبت نام';
   static const signIn = 'ورود';
+  static const suggestionForYou = 'ییشنهادات برای شما';
   static const sendSmsMessage = 'لظفا شماره تلفن خود را جهت دریافت کد تایید وارد کنید.';
   static const registerMessage = 'در صورت تمایل اطلاعات کاربری خود را تکمیل کنید';
   static const sendOtpTitle = 'ارسال کد ورود';
