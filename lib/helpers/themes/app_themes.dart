@@ -12,11 +12,12 @@ class AppThemes {
       background: AppColors.white,
       primaryContainer: AppColors.darkSecondary
     ),
-    textTheme: TextTheme(
+    textTheme: const TextTheme(
       bodyMedium: TextStyle(color: AppColors.darkSecondary,fontSize: 16),
       bodySmall: TextStyle(color: AppColors.darkSecondary,fontSize: 14),
       titleLarge: TextStyle(color: AppColors.primary,fontWeight: FontWeight.w700,fontSize: 24),
       titleMedium: TextStyle(color: AppColors.darkSecondary,fontSize: 18,fontWeight: FontWeight.w700),
+      titleSmall: TextStyle(color: AppColors.darkSecondary,fontSize: 14,fontWeight: FontWeight.w700),
     )
   );
 }

@@ -8,6 +8,7 @@ import 'package:flutter_house_reservation/modules/home/widgets/home_app_bar_body
 import 'package:flutter_house_reservation/modules/home/widgets/home_segmented_button_widget.dart';
 import 'package:flutter_house_reservation/modules/home/widgets/home_slider_widget.dart';
 import 'package:flutter_house_reservation/modules/home/widgets/home_tag_widget.dart';
+import 'package:flutter_house_reservation/modules/home/widgets/user_suggestion_home_item_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
@@ -58,16 +59,39 @@ class HomePage extends StatelessWidget {
                     itemCount: 3,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
-                        return HomeTagWidget(index: index,);
+                        return Padding(
+                          padding:  EdgeInsets.only(right: index == 0? 25 : 0),
+                          child: HomeTagWidget(index: index,),
+                        );
                       },
                   ),
                 ),
               ),
-
+              //suggestion  for user list
+              SliverToBoxAdapter(
+                child: SizedBox(
+                  height: 300.h,
+                  child: ListView.builder(
+                      itemCount: 8,
+                      scrollDirection: Axis.horizontal,
+                      itemBuilder: (context, index) {
+                        return Padding(
+                          padding:  EdgeInsets.only(
+                            top: 16.h,
+                            left: 24.w,
+                            right: index == 0? 25.w : 0
+                          ),
+                          child: const UserSuggestionHomeItemWidget(),
+                        );
+                      },
+                  ),
+                ),
+              )
             ],
           );
         });
   }
 }
+
 
 

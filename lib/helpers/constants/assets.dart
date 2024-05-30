@@ -3,6 +3,9 @@ class Assets {
   static const location = "assets/svgs/locate.svg";
   static const search = "assets/svgs/search.svg";
   static const heart = "assets/svgs/heart.svg";
+  static const bathroom = "assets/svgs/bathroom.svg";
+  static const bedroom = "assets/svgs/bedroom.svg";
+  static const star = "assets/svgs/star.svg";
   static const onBoarding1 = "assets/jpgs/onboarding1.jpg";
   static const onBoarding2 = "assets/jpgs/onboarding2.jpg";
   static const onBoarding3 = "assets/jpgs/onboarding3.jpg";
