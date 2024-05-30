@@ -8,6 +8,7 @@ import 'package:flutter_house_reservation/modules/home/widgets/home_app_bar_body
 import 'package:flutter_house_reservation/modules/home/widgets/home_segmented_button_widget.dart';
 import 'package:flutter_house_reservation/modules/home/widgets/home_slider_widget.dart';
 import 'package:flutter_house_reservation/modules/home/widgets/home_tag_widget.dart';
+import 'package:flutter_house_reservation/modules/home/widgets/popular_house_item_widget.dart';
 import 'package:flutter_house_reservation/modules/home/widgets/user_suggestion_home_item_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -70,7 +71,7 @@ class HomePage extends StatelessWidget {
               //suggestion  for user list
               SliverToBoxAdapter(
                 child: SizedBox(
-                  height: 300.h,
+                  height: 250.h,
                   child: ListView.builder(
                       itemCount: 8,
                       scrollDirection: Axis.horizontal,
@@ -86,12 +87,28 @@ class HomePage extends StatelessWidget {
                       },
                   ),
                 ),
-              )
+              ),
+              // new home list header
+              SliverToBoxAdapter(
+                child: Padding(
+                  padding: const EdgeInsets.fromLTRB(25.0, 16.0, 25.0, 12.0),
+                  child: Text(AppStrings.popularHouse,style: context.textTheme.titleMedium),
+                ),
+              ),
+              // popular house list
+              SliverList(delegate: SliverChildBuilderDelegate(
+                childCount: 8,
+                (context, index) {
+                  return const PopularHouseItemWidget();
+                },
+              ))
             ],
           );
         });
   }
 }
+
+
 
 
 

@@ -3,7 +3,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_strings.dart';
 import 'package:flutter_house_reservation/helpers/themes/app_themes.dart';
-import 'package:flutter_house_reservation/modules/main/pages/main_page.dart';
 import 'package:flutter_house_reservation/modules/splash/pages/splash_page.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -28,7 +27,7 @@ class MyApp extends StatelessWidget {
         locale: const Locale("fa"),
         title: AppStrings.appName,
         theme: AppThemes.darkTheme,
-        home: const MainPage(),
+        home: const SplashPage(),
       )
     );
   }
