@@ -6,6 +6,11 @@ class Assets {
   static const navHome = "assets/svgs/nav_home.svg";
   static const navMessage = "assets/svgs/nav_message.svg";
   static const navBag = "assets/svgs/nav_bag.svg";
+  static const navHeart = "assets/svgs/nav_heart.svg";
+  static const navSelectedHeart = "assets/svgs/selected_heart.svg";
+  static const navSelectedHome = "assets/svgs/selected_home.svg";
+  static const navSelectedMessage = "assets/svgs/selected_message.svg";
+  static const navSelectedBag = "assets/svgs/selected_bag.svg";
   static const bathroom = "assets/svgs/bathroom.svg";
   static const bedroom = "assets/svgs/bedroom.svg";
   static const star = "assets/svgs/star.svg";

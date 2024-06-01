@@ -1,6 +1,4 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
 import 'package:flutter_house_reservation/modules/home/pages/home_page.dart';
 import 'package:flutter_house_reservation/modules/main/controllers/navigation_controller.dart';
 import 'package:flutter_house_reservation/modules/main/widgets/custom_navigation_widget.dart';
@@ -36,9 +34,7 @@ class MainPage extends StatelessWidget {
                   child: Padding(
                     padding:  EdgeInsets.symmetric(horizontal: 25.h,vertical: 10.h),
                     child:  CustomNavigation(
-                      onChangePage: (newPage) {
-
-                      },
+                      onChangePage: (newPage) => buildController.onChangePage(newPage),
                       selectedPage: buildController.selectedPageIndex,
                     ),
                   ),

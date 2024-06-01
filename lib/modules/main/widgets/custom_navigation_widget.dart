@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
 import 'package:flutter_house_reservation/helpers/constants/assets.dart';
@@ -21,10 +22,10 @@ class CustomNavigation extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          _NavItem(onTap: () => onChangePage(0), iconPath: Assets.navHome, selected: selectedPage == 0),
-          _NavItem(onTap: () => onChangePage(1), iconPath: Assets.navMessage, selected: selectedPage == 1),
-          _NavItem(onTap: () => onChangePage(2), iconPath: Assets.heart, selected: selectedPage == 2),
-          _NavItem(onTap: () => onChangePage(3), iconPath: Assets.navBag, selected: selectedPage == 3),
+          _NavItem(onTap: () => onChangePage(0), deSelectedIcon: Assets.navHome,selectedIcon: Assets.navSelectedHome, selected: selectedPage == 0),
+          _NavItem(onTap: () => onChangePage(1), deSelectedIcon: Assets.navHeart,selectedIcon: Assets.navSelectedHeart, selected: selectedPage == 1),
+          _NavItem(onTap: () => onChangePage(2), deSelectedIcon: Assets.navMessage,selectedIcon: Assets.navSelectedMessage, selected: selectedPage == 2),
+          _NavItem(onTap: () => onChangePage(3), deSelectedIcon: Assets.navBag,selectedIcon: Assets.navSelectedBag, selected: selectedPage == 3),
         ],
       ),
     );
@@ -33,12 +34,12 @@ class CustomNavigation extends StatelessWidget {
 
 class _NavItem extends StatelessWidget {
   const _NavItem(
-      {super.key,
-      required this.iconPath,
+      {required this.deSelectedIcon,
       required this.selected,
-      required this.onTap});
+      required this.onTap, required this.selectedIcon});
 
-  final String iconPath;
+  final String deSelectedIcon;
+  final String selectedIcon;
   final bool selected;
   final VoidCallback onTap;
 
@@ -47,17 +48,19 @@ class _NavItem extends StatelessWidget {
     return Stack(
       alignment: Alignment.center,
       children: [
+        AnimatedContainer(
+          duration: const Duration(milliseconds: 500),
+          width: selected? 40.w : 0,
+          height: selected? 40.h : 0,
+          decoration: const BoxDecoration(
+              shape: BoxShape.circle, color: AppColors.lightPurple),
+        ),
         GestureDetector(
           onTap: onTap,
-          child: AnimatedContainer(
-            duration: const Duration(milliseconds: 500),
-            width: selected? 40.w : 0,
-            height: selected? 40.h : 0,
-            decoration: const BoxDecoration(
-                shape: BoxShape.circle, color: AppColors.lightPurple),
-          ),
-        ),
-        SvgPicture.asset(iconPath,height: 18.h,),
+            child: SvgPicture.asset(
+              selected? selectedIcon : deSelectedIcon,
+              colorFilter: selected ? const ColorFilter.mode(AppColors.whiteSecondary, BlendMode.srcIn) : null,
+              height: 18.h,)),
       ],
     );
   }
