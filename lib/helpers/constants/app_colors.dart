@@ -16,6 +16,7 @@ class AppColors {
   static const lightBlue = Color(0xFFE7F1FF);
   static const blue = Color(0xFF82A4D0);
   static const lightGreyText = Color(0xFF78829D);
+  static const lightPurple = Color(0xFF332C5A);
 }
 
 class AppGradiant{

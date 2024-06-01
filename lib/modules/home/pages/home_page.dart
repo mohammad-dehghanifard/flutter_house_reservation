@@ -101,7 +101,11 @@ class HomePage extends StatelessWidget {
                 (context, index) {
                   return const PopularHouseItemWidget();
                 },
-              ))
+              )),
+              // Sized box
+              SliverToBoxAdapter(
+                child: SizedBox(height: 65.h),
+              ),
             ],
           );
         });
