@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
 import 'package:flutter_house_reservation/helpers/constants/assets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -48,12 +49,14 @@ class _NavItem extends StatelessWidget {
     return Stack(
       alignment: Alignment.center,
       children: [
-        AnimatedContainer(
-          duration: const Duration(milliseconds: 500),
-          width: selected? 40.w : 0,
-          height: selected? 40.h : 0,
-          decoration: const BoxDecoration(
-              shape: BoxShape.circle, color: AppColors.lightPurple),
+        RepaintBoundary(
+          child: AnimatedContainer(
+            duration: const Duration(milliseconds: 250),
+            width: selected? 40.w : 0,
+            height: selected? 40.h : 0,
+            decoration: const BoxDecoration(
+                shape: BoxShape.circle, color: AppColors.lightPurple),
+          ),
         ),
         GestureDetector(
           onTap: onTap,

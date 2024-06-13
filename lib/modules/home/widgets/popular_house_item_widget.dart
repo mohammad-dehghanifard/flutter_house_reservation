@@ -46,16 +46,16 @@ class PopularHouseItemWidget extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text("عنوان وارد شده",style: context.textTheme.titleMedium),
-                  Spacer(),
+                  const Spacer(),
                   // price and time
                   Row(
                     children: [
                       Text("125،000 تومان",style: context.textTheme.bodySmall),
-                      Spacer(),
+                      const Spacer(),
                       Text("اجاره ساعتی",style: context.textTheme.titleSmall),
                     ],
                   ),
-                  Spacer(),
+                  const Spacer(),
                   // score and features
                   Row(
                     children: [

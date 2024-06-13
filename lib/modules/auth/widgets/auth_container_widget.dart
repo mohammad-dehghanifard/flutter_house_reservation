@@ -24,26 +24,28 @@ class AuthContainer extends StatelessWidget {
               ? const ConfirmOtpWidget()
               : const RegisterWidget();
 
-          return AnimatedContainer(
-              duration: const Duration(milliseconds: 50),
-              margin: EdgeInsets.only(top: 12.h),
-              padding: const EdgeInsets.all(25.0),
-              width: double.infinity,
-              height: buildController.pageType == AuthPageType.sendOtp
-                  ? 200.h
-                  : buildController.pageType ==
-                  AuthPageType.confirmOtp
-                  ? 250.h
-                  : 300.h,
-              decoration: BoxDecoration(
-                  color: AppColors.white,
-                  borderRadius: BorderRadius.circular(12.r)
-              ),
-              child: AnimatedSwitcher(
-                duration: const Duration(seconds: 1),
-                child: child,
-              )
-
+          return RepaintBoundary(
+            child: AnimatedContainer(
+                duration: const Duration(milliseconds: 50),
+                margin: EdgeInsets.only(top: 12.h),
+                padding: const EdgeInsets.all(25.0),
+                width: double.infinity,
+                height: buildController.pageType == AuthPageType.sendOtp
+                    ? 200.h
+                    : 290.h,
+                decoration: BoxDecoration(
+                    color: AppColors.white,
+                    borderRadius: BorderRadius.circular(12.r)
+                ),
+                child: RepaintBoundary(
+                  child: AnimatedSwitcher(
+                    switchInCurve: Curves.easeInToLinear,
+                    duration: const Duration(milliseconds: 350),
+                    child: child,
+                  ),
+                )
+            
+            ),
           );
         }
     );

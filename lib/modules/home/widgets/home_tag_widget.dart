@@ -22,32 +22,34 @@ class HomeTagWidget extends StatelessWidget {
             children: [
               GestureDetector(
                 onTap: () => buildController.updateTag(index),
-                child: AnimatedContainer(
-                  duration: const Duration(milliseconds: 700),
-                  margin:  EdgeInsets.symmetric(horizontal: 6.w),
-                  width: 135.w,
-                  height: 60.h,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(18.r),
-                      color: selected? AppColors.lightBlue :AppColors.lightWhite
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceAround,
-                    children: [
-                      // image
-                      SizedBox(
-                          width: 45.w,
-                          height: 45.h,
-                          child: ClipRRect(
-                              borderRadius: BorderRadius.circular(8.r),
-                              child: Image.asset(Assets.house2,fit: BoxFit.cover))),
-                      Text(
-                        "آپارتمان",
-                        style: context.textTheme.titleMedium!.apply(
-                            color: selected? AppColors.primary : AppColors.greyText
-                        ),
-                      )
-                    ],
+                child: RepaintBoundary(
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 700),
+                    margin:  EdgeInsets.symmetric(horizontal: 6.w),
+                    width: 135.w,
+                    height: 60.h,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(18.r),
+                        color: selected? AppColors.lightBlue :AppColors.lightWhite
+                    ),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceAround,
+                      children: [
+                        // image
+                        SizedBox(
+                            width: 45.w,
+                            height: 45.h,
+                            child: ClipRRect(
+                                borderRadius: BorderRadius.circular(8.r),
+                                child: Image.asset(Assets.house2,fit: BoxFit.cover))),
+                        Text(
+                          "آپارتمان",
+                          style: context.textTheme.titleMedium!.apply(
+                              color: selected? AppColors.primary : AppColors.greyText
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               ),

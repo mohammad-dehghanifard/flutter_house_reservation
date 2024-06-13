@@ -50,14 +50,16 @@ class OnBoardingPage extends StatelessWidget {
                         visible: buildController.selectedPage > 0,
                           maintainAnimation: true,
                           maintainState: true,
-                          child:AnimatedOpacity(
-                            opacity: buildController.selectedPage > 0 ? 1 : 0,
-                            duration: 1.seconds,
-                            curve: Curves.fastOutSlowIn,
-                            child: CustomButtonWidget(
-                          colorType: ButtonColorType.white,
-                          onTap:() => buildController.changePage(previous: true),
-                          text: AppStrings.previous),)
+                          child: RepaintBoundary(
+                            child: AnimatedOpacity(
+                              opacity: buildController.selectedPage > 0 ? 1 : 0,
+                              duration: 1.seconds,
+                              curve: Curves.fastOutSlowIn,
+                              child: CustomButtonWidget(
+                            colorType: ButtonColorType.white,
+                            onTap:() => buildController.changePage(previous: true),
+                            text: AppStrings.previous),),
+                          )
                       )
                     ],
                   ),

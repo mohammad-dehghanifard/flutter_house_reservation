@@ -17,18 +17,20 @@ class OnBoardingPageIndicatorWidget extends StatelessWidget {
       children: List.generate(FakeData.onBoardingItems.length, (index) {
         return GetBuilder<OnBoardingController>(builder: (buildController) {
           final selected = buildController.selectedPage == index;
-          return AnimatedContainer(
-            duration: 350.milliseconds,
-            width: !selected ? 12.w : 24.w,
-            height: !selected ? 12.w : 6.w,
-            margin: EdgeInsets.only(
-              right: 2.w,
+          return RepaintBoundary(
+            child: AnimatedContainer(
+              duration: 350.milliseconds,
+              width: !selected ? 12.w : 24.w,
+              height: !selected ? 12.w : 6.w,
+              margin: EdgeInsets.only(
+                right: 2.w,
+              ),
+              decoration: BoxDecoration(
+                  borderRadius: selected
+                      ? BorderRadius.circular(4)
+                      : BorderRadius.circular(100),
+                  color: selected ? AppColors.blue : AppColors.lightBlue),
             ),
-            decoration: BoxDecoration(
-                borderRadius: selected
-                    ? BorderRadius.circular(4)
-                    : BorderRadius.circular(100),
-                color: selected ? AppColors.blue : AppColors.lightBlue),
           );
         });
       }),
