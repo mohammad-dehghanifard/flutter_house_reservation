@@ -1,6 +1,6 @@
 class AdsModel {
-  final String image,title,description;
-  final int score,bedroom,bathroom;
+  final String image,title,description,rentType;
+  final int score,bedroom,bathroom,price;
 
   AdsModel(
       {required this.image,
@@ -8,5 +8,7 @@ class AdsModel {
       required this.description,
       required this.score,
       required this.bedroom,
-      required this.bathroom});
+      required this.bathroom,
+      required this.price,
+      required this.rentType});
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_house_reservation/backend/models/ads_model.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
 import 'package:flutter_house_reservation/helpers/constants/assets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,9 +10,9 @@ import 'package:get/get.dart';
 
 class PopularHouseItemWidget extends StatelessWidget {
   const PopularHouseItemWidget({
-    super.key,
+    super.key, required this.ads,
   });
-
+  final AdsModel ads;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -32,8 +33,8 @@ class PopularHouseItemWidget extends StatelessWidget {
             height: 90,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(12.r),
-                image: const DecorationImage(
-                    image: AssetImage(Assets.house2),
+                image:  DecorationImage(
+                    image: AssetImage(ads.image),
                     fit: BoxFit.cover
                 )
             ),
@@ -45,14 +46,14 @@ class PopularHouseItemWidget extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text("عنوان وارد شده",style: context.textTheme.titleMedium),
+                  Text(ads.title,style: context.textTheme.titleMedium,maxLines: 1,overflow: TextOverflow.ellipsis,),
                   const Spacer(),
                   // price and time
                   Row(
                     children: [
-                      Text("125،000 تومان",style: context.textTheme.bodySmall),
+                      Text("${ads.price} تومان",style: context.textTheme.bodySmall),
                       const Spacer(),
-                      Text("اجاره ساعتی",style: context.textTheme.titleSmall),
+                      Text(ads.rentType,style: context.textTheme.titleSmall),
                     ],
                   ),
                   const Spacer(),
@@ -65,7 +66,7 @@ class PopularHouseItemWidget extends StatelessWidget {
                         colorFilter: const ColorFilter.mode(AppColors.greyText, BlendMode.srcIn),
                       ),
                       SizedBox(width: 6.w),
-                      Text("1",style: context.textTheme.bodyMedium!.copyWith(fontSize: 16)),
+                      Text("${ads.bathroom}",style: context.textTheme.bodyMedium!.copyWith(fontSize: 16)),
 
                       const Spacer(),
                       Padding(
@@ -77,12 +78,12 @@ class PopularHouseItemWidget extends StatelessWidget {
                         ),
                       ),
                       SizedBox(width: 6.w),
-                      Text("2",style: context.textTheme.bodyMedium!.copyWith(fontSize: 16)),
+                      Text("${ads.bedroom}",style: context.textTheme.bodyMedium!.copyWith(fontSize: 16)),
 
                       const Spacer(),
                       SvgPicture.asset(Assets.star,height: 16.h),
                       SizedBox(width: 6.w),
-                      Text("4",style: context.textTheme.bodyMedium!.copyWith(fontSize: 16)),
+                      Text("${ads.score}",style: context.textTheme.bodyMedium!.copyWith(fontSize: 16)),
                     ],
                   )
 

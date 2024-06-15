@@ -3,12 +3,15 @@ class AppStrings {
   static const appVersion = 'ورژن : 1.0.0';
   static const appName = 'Rentee';
   static const next = 'بعدی';
+  static const showComments = 'مشاهده نظرات';
   static const inputPhoneHint = 'شماره تماس...';
   static const searchHint = 'متن جست و جو را وارد کنید...';
   static const phoneNumberLabel = 'شماره همراه';
   static const fullNameLabel = 'نام و نام خانوادگی';
   static const usernameLabel = 'نام کاربری';
   static const sendOtpCode = 'ارسال کد';
+  static const description = 'توضیحات';
+  static const facilities = 'امکانات';
   static const acceptOtpCode = 'تایید کد';
   static const inputAcceptOtpCode = 'کد ارسال شده را وارد کنید';
   static const inputOtpCodeMessage = 'لطفا کد تایید ارسال شده را وارد کنید.';

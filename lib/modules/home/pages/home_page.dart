@@ -74,7 +74,7 @@ class HomePage extends StatelessWidget {
                 child: SizedBox(
                   height: 250.h,
                   child: ListView.builder(
-                      itemCount: 8,
+                      itemCount: FakeData.homeAdsList.length,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
                         return Padding(
@@ -83,7 +83,7 @@ class HomePage extends StatelessWidget {
                             left: 24.w,
                             right: index == 0? 25.w : 0
                           ),
-                          child: const UserSuggestionHomeItemWidget(),
+                          child:  UserSuggestionHomeItemWidget(ads: FakeData.homeAdsList[index]),
                         );
                       },
                   ),
@@ -98,9 +98,9 @@ class HomePage extends StatelessWidget {
               ),
               // popular house list
               SliverList(delegate: SliverChildBuilderDelegate(
-                childCount: 8,
+                childCount: FakeData.homeAdsList.length,
                 (context, index) {
-                  return const PopularHouseItemWidget();
+                  return  PopularHouseItemWidget(ads: FakeData.homeAdsList[index]);
                 },
               )),
               // Sized box
