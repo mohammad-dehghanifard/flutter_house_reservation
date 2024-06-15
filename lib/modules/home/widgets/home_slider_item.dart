@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_house_reservation/backend/models/slider_model.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
 import 'package:flutter_house_reservation/helpers/constants/assets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -8,10 +9,10 @@ import 'package:get/get.dart';
 class HomeSliderItem extends StatelessWidget {
   const HomeSliderItem({
     super.key,
-    required this.imagePath,
+    required this.sliderItem,
   });
 
-  final String imagePath;
+  final SliderModel sliderItem;
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +24,7 @@ class HomeSliderItem extends StatelessWidget {
         ClipRRect(
           borderRadius: BorderRadius.circular(12.r),
           child: Image.asset(
-            imagePath,
+            sliderItem.image,
             fit: BoxFit.cover,
           ),
         ),
@@ -54,7 +55,7 @@ class HomeSliderItem extends StatelessWidget {
               // title and heart icon
               Row(
                 children: [
-                  Text("عنوان وارد شده",style: context.textTheme.titleLarge!.apply(color: AppColors.whiteSecondary),),
+                  Text(sliderItem.title,style: context.textTheme.titleLarge!.apply(color: AppColors.whiteSecondary),),
                   const Spacer(),
                   SvgPicture.asset(Assets.heart,colorFilter: const ColorFilter.mode(AppColors.whiteSecondary, BlendMode.srcIn),)
                 ],
@@ -63,9 +64,9 @@ class HomeSliderItem extends StatelessWidget {
               // information
               Row(
                 children: [
-                  Text("اجاره ساعتی",style: context.textTheme.titleMedium!.apply(color: AppColors.whiteSecondary),),
+                  Text(sliderItem.rentType,style: context.textTheme.titleMedium!.apply(color: AppColors.whiteSecondary),),
                   const Spacer(),
-                  Text("نام محله",style: context.textTheme.bodySmall!.apply(color: AppColors.whiteSecondary),),
+                  Text(sliderItem.neighbourhood,style: context.textTheme.bodySmall!.apply(color: AppColors.whiteSecondary),),
 
                 ],
               ),
