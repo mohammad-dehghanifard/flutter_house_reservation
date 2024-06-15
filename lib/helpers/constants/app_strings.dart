@@ -3,6 +3,7 @@ class AppStrings {
   static const appVersion = 'ورژن : 1.0.0';
   static const appName = 'Rentee';
   static const next = 'بعدی';
+  static const reservationNow = 'همین حالا رزرو کن!';
   static const showComments = 'مشاهده نظرات';
   static const inputPhoneHint = 'شماره تماس...';
   static const searchHint = 'متن جست و جو را وارد کنید...';

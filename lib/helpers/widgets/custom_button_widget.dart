@@ -5,11 +5,12 @@ import 'package:get/get.dart';
 
 class CustomButtonWidget extends StatelessWidget {
   const CustomButtonWidget(
-      {super.key, this.colorType = ButtonColorType.primary, required this.onTap, required this.text});
+      {super.key, this.colorType = ButtonColorType.primary, required this.onTap, required this.text,  this.width = 100, this.height = 36});
 
   final ButtonColorType colorType;
   final VoidCallback onTap;
   final String text;
+  final double width,height;
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +23,7 @@ class CustomButtonWidget extends StatelessWidget {
                         ? AppColors.whiteSecondary
                         : AppColors.secondary),
             elevation: const MaterialStatePropertyAll(0),
-            minimumSize: MaterialStatePropertyAll(Size(100.w, 36.h)),
+            minimumSize: MaterialStatePropertyAll(Size(width.w, height.h)),
             shape: MaterialStatePropertyAll(RoundedRectangleBorder(
                 borderRadius: BorderRadius.circular(8.w)))),
         onPressed: onTap,
