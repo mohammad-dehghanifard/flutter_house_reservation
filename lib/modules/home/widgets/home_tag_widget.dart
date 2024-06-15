@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_house_reservation/fake_data.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
 import 'package:flutter_house_reservation/helpers/constants/assets.dart';
 import 'package:flutter_house_reservation/helpers/constants/controllers_build_id.dart';
@@ -41,9 +42,9 @@ class HomeTagWidget extends StatelessWidget {
                             height: 45.h,
                             child: ClipRRect(
                                 borderRadius: BorderRadius.circular(8.r),
-                                child: Image.asset(Assets.house2,fit: BoxFit.cover))),
+                                child: Image.asset(FakeData.homeTagList[index].image,fit: BoxFit.cover))),
                         Text(
-                          "آپارتمان",
+                          FakeData.homeTagList[index].title,
                           style: context.textTheme.titleMedium!.apply(
                               color: selected? AppColors.primary : AppColors.greyText
                           ),

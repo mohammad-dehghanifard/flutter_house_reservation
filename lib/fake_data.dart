@@ -1,5 +1,6 @@
 import 'package:flutter_house_reservation/backend/models/on_boarding_model.dart';
 import 'package:flutter_house_reservation/backend/models/slider_model.dart';
+import 'package:flutter_house_reservation/backend/models/tag_model.dart';
 import 'package:flutter_house_reservation/helpers/constants/assets.dart';
 
 class FakeData {
@@ -26,5 +27,12 @@ class FakeData {
     SliderModel(image: Assets.house1, title: "آپارتمان 90 متری شیک", neighbourhood: "عاشوری", rentType: "اجاره ماهانه", favorite: false),
     SliderModel(image: Assets.house2, title: "آپارتمان تک خواب", neighbourhood: "با هنر", rentType: "اجاره سالانه", favorite: false),
     SliderModel(image: Assets.house3, title: "خانه ویلایی 150 متری نوساز", neighbourhood: "امام زاده", rentType: "اجاره ساعتی", favorite: false),
+  ];
+
+  static List<TagModel> homeTagList = [
+    TagModel(title: "آپارتمان", image: Assets.house2),
+    TagModel(title: "ویلایی", image: Assets.house1),
+    TagModel(title: "دوبلکس", image: Assets.house3),
+    TagModel(title: "مدرن", image: Assets.house2),
   ];
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_house_reservation/fake_data.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_strings.dart';
 import 'package:flutter_house_reservation/helpers/widgets/app_bar_container_widget.dart';
 import 'package:flutter_house_reservation/modules/home/controllers/home_controller.dart';
@@ -57,7 +58,7 @@ class HomePage extends StatelessWidget {
                 child: SizedBox(
                   height: 80,
                   child: ListView.builder(
-                    itemCount: 3,
+                    itemCount: FakeData.homeTagList.length,
                       scrollDirection: Axis.horizontal,
                       itemBuilder: (context, index) {
                         return Padding(
