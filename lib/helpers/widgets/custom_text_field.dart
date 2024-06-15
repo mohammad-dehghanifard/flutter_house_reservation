@@ -14,6 +14,7 @@ class CustomTextField extends StatelessWidget {
     this.showLabel = true,
     this.inputType = TextInputType.text,
     this.validator, this.suffixIconPath,
+    this.maxLine = 1,
   });
 
   final TextEditingController? controller;
@@ -21,6 +22,7 @@ class CustomTextField extends StatelessWidget {
   final String? hint;
   final String? suffixIconPath;
   final bool showLabel;
+  final int maxLine;
   final TextInputType inputType;
   final String? Function(String?)? validator;
 
@@ -32,6 +34,7 @@ class CustomTextField extends StatelessWidget {
         Text(label ?? "",style: context.textTheme.titleMedium!.apply(fontSizeFactor: 0.9)),
         SizedBox(height: 4.h),
         TextFormField(
+          maxLines: maxLine,
           controller: controller,
           keyboardType: inputType,
           validator: validator,
