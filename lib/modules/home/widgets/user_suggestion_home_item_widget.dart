@@ -18,7 +18,7 @@ class UserSuggestionHomeItemWidget extends StatelessWidget {
       mainAxisSize: MainAxisSize.min,
       children: [
         GestureDetector(
-          onTap: () => Navigator.of(context).push(MaterialPageRoute(builder: (context) => DetailAdsPage(ads: ads),)),
+          onTap: () => Get.to(DetailAdsPage(ads: ads)),
           child: Container(
             width: 240,
             height: 285,

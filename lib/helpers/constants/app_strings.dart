@@ -2,8 +2,10 @@ class AppStrings {
   AppStrings._();
   static const appVersion = 'ورژن : 1.0.0';
   static const appName = 'Rentee';
+  static const sendComment = 'ثبت نظر';
   static const next = 'بعدی';
   static const reservationNow = 'همین حالا رزرو کن!';
+  static const comments = 'نظرات';
   static const showComments = 'مشاهده نظرات';
   static const inputPhoneHint = 'شماره تماس...';
   static const searchHint = 'متن جست و جو را وارد کنید...';

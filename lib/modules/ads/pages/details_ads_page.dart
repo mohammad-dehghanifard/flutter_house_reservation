@@ -1,9 +1,9 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_house_reservation/backend/models/ads_model.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_strings.dart';
 import 'package:flutter_house_reservation/helpers/constants/assets.dart';
+import 'package:flutter_house_reservation/modules/ads/pages/comments_page.dart';
 import 'package:flutter_house_reservation/modules/ads/widgets/facilities_item_widget.dart';
 import 'package:flutter_house_reservation/modules/ads/widgets/reservation_now_button.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -51,9 +51,40 @@ class DetailAdsPage extends StatelessWidget {
                             )
                           ]
                         ),
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(12.r),
-                          child: Image.asset(ads.image,fit: BoxFit.cover,),
+                        child: Stack(
+                          alignment: Alignment.bottomRight,
+                          children: [
+                            ClipRRect(
+                              borderRadius: BorderRadius.circular(12.r),
+                              child: Image.asset(ads.image,fit: BoxFit.cover,height: double.infinity,),
+                            ),
+                            //gradiant
+                            Container(
+                              width: double.infinity,
+                              height: 230.h,
+                              decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(12.r),
+                                  gradient: LinearGradient(
+                                      colors: AppGradiant.sliderGradiant,
+                                      begin: FractionalOffset.bottomCenter,
+                                      end: FractionalOffset.topCenter
+                                  )
+                              ),
+                            ),
+                            // title and price
+                            Padding(
+                              padding: const EdgeInsets.all(12.0),
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                mainAxisSize: MainAxisSize.min,
+                                children: [
+                                  Text(ads.title,style: context.textTheme.titleLarge!.apply(color: AppColors.whiteSecondary)),
+                                  SizedBox(height: 4.h),
+                                  Text("${ads.rentType} / ${ads.price}  تومان",style: context.textTheme.bodySmall!.apply(color: AppColors.whiteSecondary))
+                                ],
+                              ),
+                            )
+                          ],
                         ),
                       ),
                       SizedBox(height: 16.h),
@@ -117,7 +148,7 @@ class DetailAdsPage extends StatelessWidget {
                       ),
                       SizedBox(height: 12.h),
                       // comments
-                      TextButton(onPressed: () {}, child: Text("${AppStrings.showComments}(64 نظر ثبت شده)",style: context.textTheme.titleSmall!.apply(color: AppColors.primary)))
+                      TextButton(onPressed: () => Get.to(const CommentsPage()), child: Text("${AppStrings.showComments}(64 نظر ثبت شده)",style: context.textTheme.titleSmall!.apply(color: AppColors.primary)))
                     ],
                   ),
                 )
