@@ -8,6 +8,7 @@ class AppStrings {
   static const comments = 'نظرات';
   static const showComments = 'مشاهده نظرات';
   static const inputPhoneHint = 'شماره تماس...';
+  static const inputCommentHint = 'خوشحال میشیم نظرت رو با ما و بقیه دوستات به اشتراک بزاری!';
   static const searchHint = 'متن جست و جو را وارد کنید...';
   static const phoneNumberLabel = 'شماره همراه';
   static const fullNameLabel = 'نام و نام خانوادگی';

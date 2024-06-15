@@ -15,6 +15,7 @@ class CustomTextField extends StatelessWidget {
     this.inputType = TextInputType.text,
     this.validator, this.suffixIconPath,
     this.maxLine = 1,
+    this.hasBorder = false,
   });
 
   final TextEditingController? controller;
@@ -22,6 +23,7 @@ class CustomTextField extends StatelessWidget {
   final String? hint;
   final String? suffixIconPath;
   final bool showLabel;
+  final bool hasBorder;
   final int maxLine;
   final TextInputType inputType;
   final String? Function(String?)? validator;
@@ -50,11 +52,11 @@ class CustomTextField extends StatelessWidget {
             hintStyle: context.textTheme.bodySmall!.apply(color: AppColors.lightGrey),
             fillColor: AppColors.whiteSecondary,
             enabledBorder: OutlineInputBorder(
-              borderSide: BorderSide.none,
+              borderSide: hasBorder? const BorderSide(color: AppColors.secondary) :BorderSide.none,
               borderRadius: BorderRadius.circular(8.r)
             ),
             focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide.none,
+                borderSide: hasBorder? const BorderSide(color: AppColors.secondary) :BorderSide.none,
                 borderRadius: BorderRadius.circular(8.r)
             ),
           ),
