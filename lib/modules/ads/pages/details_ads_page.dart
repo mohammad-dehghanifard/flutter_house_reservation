@@ -40,6 +40,7 @@ class DetailAdsPage extends StatelessWidget {
                       Container(
                         width: double.infinity,
                         height: 330.h,
+                        margin: EdgeInsets.only(top: 8.h),
                         decoration: BoxDecoration(
                           border: Border(bottom: BorderSide(color: Colors.white.withOpacity(0.30))),
                           borderRadius: BorderRadius.circular(12.r),

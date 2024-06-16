@@ -22,27 +22,27 @@ class CommentsPage extends StatelessWidget {
         centerTitle: true,
         title: const Text(AppStrings.comments),
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(25.0),
-        child: GetBuilder<CommentController>(
-          init: CommentController(),
-          builder: (commentController) {
-            return Column(
-              children: [
-                // comment list
-                Expanded(
-                    child: ListView.builder(
-                      itemCount: 6,
-                        itemBuilder: (context, index) {
-                          return const Padding(
-                            padding: EdgeInsets.only(bottom: 8),
-                            child: CommentItem(),
-                          );
-                        },
-                    )
-                ),
-                // send comment
-                RepaintBoundary(
+      body: GetBuilder<CommentController>(
+        init: CommentController(),
+        builder: (commentController) {
+          return Column(
+            children: [
+              // comment list
+              Expanded(
+                  child: ListView.builder(
+                    itemCount: 6,
+                      itemBuilder: (context, index) {
+                        return  Padding(
+                          padding: EdgeInsets.fromLTRB(25.w, 8.h, 25.w, 0.h),
+                          child: const CommentItem(),
+                        );
+                      },
+                  )
+              ),
+              // send comment
+              RepaintBoundary(
+                  child: Padding(
+                    padding: const EdgeInsets.all(25),
                     child: AnimatedSwitcher(
                       duration: const Duration(milliseconds: 500),
                       child: !commentController.sendComment
@@ -69,11 +69,11 @@ class CommentsPage extends StatelessWidget {
                               ],
                             ),
                     ),
-                  )
-                ],
-            );
-          }
-        ),
+                  ),
+                )
+              ],
+          );
+        }
       ),
     );
   }
