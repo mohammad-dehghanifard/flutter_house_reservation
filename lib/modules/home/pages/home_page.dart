@@ -10,7 +10,7 @@ import 'package:flutter_house_reservation/modules/home/widgets/home_segmented_bu
 import 'package:flutter_house_reservation/modules/home/widgets/home_slider_widget.dart';
 import 'package:flutter_house_reservation/modules/home/widgets/home_tag_widget.dart';
 import 'package:flutter_house_reservation/modules/home/widgets/popular_house_item_widget.dart';
-import 'package:flutter_house_reservation/modules/home/widgets/user_suggestion_home_item_widget.dart';
+import 'package:flutter_house_reservation/modules/home/widgets/square_ads_item_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
@@ -83,7 +83,7 @@ class HomePage extends StatelessWidget {
                             left: 24.w,
                             right: index == 0? 25.w : 0
                           ),
-                          child:  UserSuggestionHomeItemWidget(ads: FakeData.homeAdsList[index]),
+                          child:  SquareAdsItemWidget(ads: FakeData.homeAdsList[index]),
                         );
                       },
                   ),

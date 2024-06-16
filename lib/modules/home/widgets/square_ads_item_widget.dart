@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_house_reservation/backend/models/ads_model.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
@@ -7,11 +8,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
 
-class UserSuggestionHomeItemWidget extends StatelessWidget {
-  const UserSuggestionHomeItemWidget({
-    super.key, required this.ads,
+class SquareAdsItemWidget extends StatelessWidget {
+  const SquareAdsItemWidget({
+    super.key, required this.ads,  this.width = 240, this.height = 230,
   });
   final AdsModel ads;
+  final double width,height;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -20,8 +22,8 @@ class UserSuggestionHomeItemWidget extends StatelessWidget {
         GestureDetector(
           onTap: () => Get.to(DetailAdsPage(ads: ads)),
           child: Container(
-            width: 240,
-            height: 285,
+            width: width.w,
+            height: height.h,
             padding: const EdgeInsets.all(16),
             decoration: BoxDecoration(
                 color: AppColors.whiteSecondary,
@@ -62,7 +64,7 @@ class UserSuggestionHomeItemWidget extends StatelessWidget {
                 ),
                 SizedBox(height: 8.h),
                 // title
-                Text(ads.title,style: context.textTheme.titleMedium,maxLines: 1,overflow: TextOverflow.ellipsis),
+                SizedBox(child: Text(ads.title,style: context.textTheme.titleMedium,maxLines: 1,overflow: TextOverflow.ellipsis)),
                 SizedBox(height: 8.h),
                 // price and time
                 Row(

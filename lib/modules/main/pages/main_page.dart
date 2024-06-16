@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_house_reservation/modules/favorite/pages/favorite_page.dart';
 import 'package:flutter_house_reservation/modules/home/pages/home_page.dart';
 import 'package:flutter_house_reservation/modules/main/controllers/navigation_controller.dart';
 import 'package:flutter_house_reservation/modules/main/widgets/custom_navigation_widget.dart';
@@ -23,7 +24,7 @@ class MainPage extends StatelessWidget {
                   controller: buildController.navigationController,
                   children: const [
                     HomePage(),
-                    ScreenTest(),
+                    FavoritePage(),
                     MessagePage(),
                     ScreenTest(),
                   ],
