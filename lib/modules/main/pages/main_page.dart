@@ -4,6 +4,7 @@ import 'package:flutter_house_reservation/modules/home/pages/home_page.dart';
 import 'package:flutter_house_reservation/modules/main/controllers/navigation_controller.dart';
 import 'package:flutter_house_reservation/modules/main/widgets/custom_navigation_widget.dart';
 import 'package:flutter_house_reservation/modules/messages/pages/messages_page.dart';
+import 'package:flutter_house_reservation/modules/profile/pages/profile_page.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
@@ -26,7 +27,7 @@ class MainPage extends StatelessWidget {
                     HomePage(),
                     FavoritePage(),
                     MessagePage(),
-                    ScreenTest(),
+                    ProfilePage(),
                   ],
                 ),
                 Positioned(

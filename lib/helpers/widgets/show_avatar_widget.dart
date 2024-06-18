@@ -6,13 +6,17 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class ShowAvatarWidget extends StatelessWidget {
   const ShowAvatarWidget({
     super.key,
+     this.width = 45,
+     this.height = 45,
   });
+
+  final double width,height;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 45.w,
-      height: 45.h,
+      width: width.w,
+      height: height.h,
       padding: const EdgeInsets.all(2),
       decoration: BoxDecoration(
           shape: BoxShape.circle,

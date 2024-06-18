@@ -26,7 +26,7 @@ class CustomNavigation extends StatelessWidget {
           _NavItem(onTap: () => onChangePage(0), deSelectedIcon: Assets.navHome,selectedIcon: Assets.navSelectedHome, selected: selectedPage == 0),
           _NavItem(onTap: () => onChangePage(1), deSelectedIcon: Assets.navHeart,selectedIcon: Assets.navSelectedHeart, selected: selectedPage == 1),
           _NavItem(onTap: () => onChangePage(2), deSelectedIcon: Assets.navMessage,selectedIcon: Assets.navSelectedMessage, selected: selectedPage == 2),
-          _NavItem(onTap: () => onChangePage(3), deSelectedIcon: Assets.navBag,selectedIcon: Assets.navSelectedBag, selected: selectedPage == 3),
+          _NavItem(onTap: () => onChangePage(3), deSelectedIcon: Assets.navProfile,selectedIcon: Assets.navSelectedProfile, selected: selectedPage == 3,iconSize: 22,),
         ],
       ),
     );
@@ -37,12 +37,15 @@ class _NavItem extends StatelessWidget {
   const _NavItem(
       {required this.deSelectedIcon,
       required this.selected,
-      required this.onTap, required this.selectedIcon});
+      required this.onTap, required this.selectedIcon,
+      this.iconSize = 18
+      });
 
   final String deSelectedIcon;
   final String selectedIcon;
   final bool selected;
   final VoidCallback onTap;
+  final double iconSize;
 
   @override
   Widget build(BuildContext context) {
@@ -62,8 +65,8 @@ class _NavItem extends StatelessWidget {
           onTap: onTap,
             child: SvgPicture.asset(
               selected? selectedIcon : deSelectedIcon,
-              colorFilter: selected ? const ColorFilter.mode(AppColors.whiteSecondary, BlendMode.srcIn) : null,
-              height: 18.h,)),
+              colorFilter: selected ? const ColorFilter.mode(AppColors.whiteSecondary, BlendMode.srcIn) : const ColorFilter.mode(AppColors.whiteSecondary, BlendMode.srcIn),
+              height: iconSize.h,)),
       ],
     );
   }

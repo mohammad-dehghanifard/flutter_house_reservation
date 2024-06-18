@@ -30,4 +30,17 @@ class AppStrings {
   static const sendSmsMessage = 'لظفا شماره تلفن خود را جهت دریافت کد تایید وارد کنید.';
   static const registerMessage = 'در صورت تمایل اطلاعات کاربری خود را تکمیل کنید';
   static const sendOtpTitle = 'ارسال کد ورود';
+  static const profileChangeInfoTitle = "ویرایش حساب کاربری";
+  static const profileChangeInfoSubTitle = "ویرایش نام کاربری، رمز عبور و تصویر پروفایل.";
+  static const profileSupportTitle = "پشتیبانی";
+  static const profileSupportSubTitle = "ارسال تیکت به پشتیبانی و پیگیری مشکلات.";
+  static const profilePrivacyTitle = "قوانین و مقررات";
+  static const profilePrivacySubTitle = "ارسال تیکت به پشتیبانی و پیگیری مشکلات.";
+  static const profileHistoryTitle = "تاریخچه سفارشات";
+  static const profileHistorySubTitle = "لیست تمام سفارشات ثبت شده توسط شما.";
+  static const profileYourAdsTitle = "آگهی های شما";
+  static const profileYourAdsSubTitle = "لیست تمام آگهی های منتشر شده توسط شما.";
+  static const profileLogOutTitle = "خروج از برنامه";
+  static const profileLogOutSubTitle = "خروج از حساب کاربری.";
+
 }

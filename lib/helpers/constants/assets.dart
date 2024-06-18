@@ -7,7 +7,9 @@ class Assets {
   static const navMessage = "assets/svgs/nav_message.svg";
   static const navBag = "assets/svgs/nav_bag.svg";
   static const navHeart = "assets/svgs/nav_heart.svg";
+  static const navProfile = "assets/svgs/nav_profile.svg";
   static const navSelectedHeart = "assets/svgs/selected_heart.svg";
+  static const navSelectedProfile = "assets/svgs/selected_profile.svg";
   static const navSelectedHome = "assets/svgs/selected_home.svg";
   static const navSelectedMessage = "assets/svgs/selected_message.svg";
   static const navSelectedBag = "assets/svgs/selected_bag.svg";
