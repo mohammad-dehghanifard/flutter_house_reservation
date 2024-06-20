@@ -25,6 +25,7 @@ class AppStrings {
   static const previous = 'قبلی';
   static const register = 'ثبت نام';
   static const signIn = 'ورود';
+  static const filter = 'فیلتر کردن';
   static const suggestionForYou = 'ییشنهادات برای شما';
   static const popularHouse = 'محبوبترین ها';
   static const sendSmsMessage = 'لظفا شماره تلفن خود را جهت دریافت کد تایید وارد کنید.';

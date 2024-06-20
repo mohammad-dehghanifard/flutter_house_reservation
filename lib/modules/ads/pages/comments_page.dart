@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_strings.dart';
+import 'package:flutter_house_reservation/helpers/widgets/custom_app_bar_widget.dart';
 import 'package:flutter_house_reservation/helpers/widgets/custom_button_widget.dart';
 import 'package:flutter_house_reservation/helpers/widgets/custom_text_field.dart';
 import 'package:flutter_house_reservation/modules/ads/controllers/comment_controller.dart';
@@ -16,12 +17,7 @@ class CommentsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      appBar: AppBar(
-        backgroundColor: AppColors.darkScaffoldBackGroundColor,
-        automaticallyImplyLeading: false,
-        centerTitle: true,
-        title: const Text(AppStrings.comments),
-      ),
+      appBar: const CustomAppBar(title: AppStrings.comments),
       body: GetBuilder<CommentController>(
         init: CommentController(),
         builder: (commentController) {

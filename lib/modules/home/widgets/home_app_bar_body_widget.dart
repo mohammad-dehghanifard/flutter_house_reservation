@@ -1,9 +1,11 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_strings.dart';
 import 'package:flutter_house_reservation/helpers/constants/assets.dart';
 import 'package:flutter_house_reservation/helpers/widgets/custom_text_field.dart';
 import 'package:flutter_house_reservation/helpers/widgets/show_avatar_widget.dart';
+import 'package:flutter_house_reservation/modules/ads/pages/filter_page.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
@@ -49,15 +51,18 @@ class HomeAppBarBodyWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               // filter button
-              Container(
-                width: 40.w,
-                height: 40.h,
-                margin: EdgeInsets.only(top: 20.h),
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(8.r),
-                    color: AppColors.secondary
+              GestureDetector(
+                onTap: () => Get.to(const FilterPage()),
+                child: Container(
+                  width: 40.w,
+                  height: 40.h,
+                  margin: EdgeInsets.only(top: 20.h),
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(8.r),
+                      color: AppColors.secondary
+                  ),
+                  child: const Icon(Icons.filter_list_alt),
                 ),
-                child: const Icon(Icons.filter_list_alt),
               ),
               SizedBox(width: 16.w),
               // search
