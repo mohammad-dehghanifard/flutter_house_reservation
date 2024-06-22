@@ -29,10 +29,20 @@ class FilterPage extends StatelessWidget {
               DropDownItem(title: 'اجاره روزانه', value: '1'),
               DropDownItem(title: 'اجاره سالانه', value: '2'),
             ]),
-
+            // filter by price
             SizedBox(height: 16.h),
             Text(AppStrings.sortByPrice,style: context.textTheme.titleMedium),
             const FilterPriceSliderWidget(),
+            SizedBox(height: 16.h),
+            // sort By Room
+            Text(AppStrings.sortByRoom,style: context.textTheme.titleMedium),
+            SizedBox(height: 8.h),
+            CustomDropdownWidget(items: [
+              DropDownItem(title: 'تک خواب', value: '0'),
+              DropDownItem(title: '2 خواب', value: '1'),
+              DropDownItem(title: '3 خواب', value: '2'),
+              DropDownItem(title: 'بیشتر از 4 اتاق', value: '2'),
+            ]),
           ],
         ),
       ),
