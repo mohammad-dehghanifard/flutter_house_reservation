@@ -10,6 +10,8 @@ class AppStrings {
   static const inputPhoneHint = 'شماره تماس...';
   static const inputCommentHint = 'خوشحال میشیم نظرت رو با ما و بقیه دوستات به اشتراک بزاری!';
   static const searchHint = 'متن جست و جو را وارد کنید...';
+  static const sortByRentType = 'مرتب سازی بر اساس نوع اجاره';
+  static const sortByPrice = 'مرتب سازی بر اساس قیمت';
   static const phoneNumberLabel = 'شماره همراه';
   static const fullNameLabel = 'نام و نام خانوادگی';
   static const usernameLabel = 'نام کاربری';
