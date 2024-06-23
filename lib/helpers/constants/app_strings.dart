@@ -14,6 +14,7 @@ class AppStrings {
   static const sortByPrice = 'مرتب سازی بر اساس قیمت';
   static const sortByRoom = 'مرتب سازی بر اساس تعداد اتاق';
   static const sortByScore = 'مرتب سازی بر اساس امتیاز کاربران';
+  static const sortByFacilities = 'مرتب سازی بر اساس امکانات';
   static const phoneNumberLabel = 'شماره همراه';
   static const fullNameLabel = 'نام و نام خانوادگی';
   static const usernameLabel = 'نام کاربری';
