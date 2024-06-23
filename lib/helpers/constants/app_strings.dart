@@ -22,6 +22,7 @@ class AppStrings {
   static const description = 'توضیحات';
   static const facilities = 'امکانات';
   static const all = 'همه';
+  static const apply = 'اعمال کردن';
   static const acceptOtpCode = 'تایید کد';
   static const inputAcceptOtpCode = 'کد ارسال شده را وارد کنید';
   static const inputOtpCodeMessage = 'لطفا کد تایید ارسال شده را وارد کنید.';

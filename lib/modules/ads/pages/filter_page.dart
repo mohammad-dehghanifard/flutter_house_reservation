@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_strings.dart';
 import 'package:flutter_house_reservation/helpers/widgets/custom_app_bar_widget.dart';
+import 'package:flutter_house_reservation/helpers/widgets/custom_button_widget.dart';
 import 'package:flutter_house_reservation/modules/ads/controllers/filter_and_search_controller.dart';
 import 'package:flutter_house_reservation/modules/ads/widgets/dropdown_custom_widget.dart';
 import 'package:flutter_house_reservation/modules/ads/widgets/filter_price_slider_widget.dart';
@@ -18,6 +19,10 @@ class FilterPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return  Scaffold(
       appBar: const CustomAppBar(title: AppStrings.filter,),
+      bottomNavigationBar: Padding(
+        padding:  EdgeInsets.symmetric(horizontal: 25.0,vertical: 10.h),
+        child: CustomButtonWidget(onTap: () {}, text: AppStrings.apply),
+      ),
       body: Padding(
         padding: const EdgeInsets.all(25.0),
         child: GetBuilder<FilterAndSearchController>(
