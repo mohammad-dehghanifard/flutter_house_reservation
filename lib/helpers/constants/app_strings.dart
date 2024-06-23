@@ -13,12 +13,14 @@ class AppStrings {
   static const sortByRentType = 'مرتب سازی بر اساس نوع اجاره';
   static const sortByPrice = 'مرتب سازی بر اساس قیمت';
   static const sortByRoom = 'مرتب سازی بر اساس تعداد اتاق';
+  static const sortByScore = 'مرتب سازی بر اساس امتیاز کاربران';
   static const phoneNumberLabel = 'شماره همراه';
   static const fullNameLabel = 'نام و نام خانوادگی';
   static const usernameLabel = 'نام کاربری';
   static const sendOtpCode = 'ارسال کد';
   static const description = 'توضیحات';
   static const facilities = 'امکانات';
+  static const all = 'همه';
   static const acceptOtpCode = 'تایید کد';
   static const inputAcceptOtpCode = 'کد ارسال شده را وارد کنید';
   static const inputOtpCodeMessage = 'لطفا کد تایید ارسال شده را وارد کنید.';
