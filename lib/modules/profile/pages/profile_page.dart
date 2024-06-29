@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_strings.dart';
 import 'package:flutter_house_reservation/helpers/widgets/show_avatar_widget.dart';
+import 'package:flutter_house_reservation/modules/profile/pages/edit_user.dart';
 import 'package:flutter_house_reservation/modules/profile/widgets/profile_option_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -14,7 +15,7 @@ class ProfilePage extends StatelessWidget {
     final List<ProfileOptionWidget> optionList = [
       // edit user
       ProfileOptionWidget(
-        onTap: () {},
+        onTap: () => Get.to(const EditUserPage()),
         title: AppStrings.profileChangeInfoTitle,
         subTitle: AppStrings.profileChangeInfoSubTitle,
         icon: Icons.person,

@@ -5,7 +5,7 @@ import 'package:flutter_house_reservation/helpers/widgets/custom_app_bar_widget.
 import 'package:flutter_house_reservation/helpers/widgets/custom_button_widget.dart';
 import 'package:flutter_house_reservation/helpers/widgets/custom_text_field.dart';
 import 'package:flutter_house_reservation/modules/ads/controllers/comment_controller.dart';
-import 'package:flutter_house_reservation/modules/ads/widgets/Rating_Bar_Widget.dart';
+import 'package:flutter_house_reservation/modules/ads/widgets/rating_bar_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
