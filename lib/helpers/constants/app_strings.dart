@@ -3,6 +3,9 @@ class AppStrings {
   static const appVersion = 'ورژن : 1.0.0';
   static const appName = 'Rentee';
   static const sendComment = 'ثبت نظر';
+  static const edit = 'ویرایش';
+  static const tipTitle = 'نکته';
+  static const tipText = 'اطلاعاتی که قصد تغییر آن ها را ندارید خالی بگذارید.(اطلاعات تغییری نخواهند کرد)';
   static const next = 'بعدی';
   static const reservationNow = 'همین حالا رزرو کن!';
   static const comments = 'نظرات';
@@ -10,6 +13,9 @@ class AppStrings {
   static const inputPhoneHint = 'شماره تماس...';
   static const inputCommentHint = 'خوشحال میشیم نظرت رو با ما و بقیه دوستات به اشتراک بزاری!';
   static const searchHint = 'متن جست و جو را وارد کنید...';
+  static const changeUserNameHint = 'نام کاربری جدید را وارد کنید...';
+  static const changeFullNameHint = 'نام و نام خانوادگی جدید را وارد کنید...';
+  static const changePhoneHint = 'شماره تلفن جدید را وارد کنید';
   static const sortByRentType = 'مرتب سازی بر اساس نوع اجاره';
   static const sortByPrice = 'مرتب سازی بر اساس قیمت';
   static const sortByRoom = 'مرتب سازی بر اساس تعداد اتاق';
