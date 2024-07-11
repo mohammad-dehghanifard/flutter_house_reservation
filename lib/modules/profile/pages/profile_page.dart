@@ -6,6 +6,7 @@ import 'package:flutter_house_reservation/modules/profile/pages/edit_user_page.d
 import 'package:flutter_house_reservation/modules/profile/pages/privacy_page.dart';
 import 'package:flutter_house_reservation/modules/profile/pages/reservation_history_page.dart';
 import 'package:flutter_house_reservation/modules/profile/pages/support_page.dart';
+import 'package:flutter_house_reservation/modules/profile/pages/user_ads_page.dart';
 import 'package:flutter_house_reservation/modules/profile/widgets/profile_option_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -46,7 +47,7 @@ class ProfilePage extends StatelessWidget {
       ),
       // user ads
       ProfileOptionWidget(
-        onTap: () {},
+        onTap: () => Get.to(const UserAdsPage()),
         title: AppStrings.profileYourAdsTitle,
         subTitle: AppStrings.profileYourAdsSubTitle,
         icon: Icons.publish,
