@@ -3,7 +3,12 @@ class AppStrings {
   static const appVersion = 'ورژن : 1.0.0';
   static const appName = 'Rentee';
   static const sendComment = 'ثبت نظر';
+  static const sendTicket = 'ارسال تیکت';
+  static const forceSupport = 'پشتیبانی فوری';
+  static const inputTicketTitleHint = 'یک عنوان برای تیکت خود وارد کنید...';
+  static const inputTicketMessageHint = 'لطفا مشکل خود را به صورت خلاصه شرح دهید...';
   static const edit = 'ویرایش';
+  static const selectDepartmentSupport = 'انتخاب واحد پشتیبانی مربوطه';
   static const tipTitle = 'نکته';
   static const tipText = 'اطلاعاتی که قصد تغییر آن ها را ندارید خالی بگذارید.(اطلاعات تغییری نخواهند کرد)';
   static const next = 'بعدی';

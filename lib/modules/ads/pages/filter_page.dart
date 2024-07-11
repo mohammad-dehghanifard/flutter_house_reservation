@@ -4,7 +4,7 @@ import 'package:flutter_house_reservation/helpers/constants/app_strings.dart';
 import 'package:flutter_house_reservation/helpers/widgets/custom_app_bar_widget.dart';
 import 'package:flutter_house_reservation/helpers/widgets/custom_button_widget.dart';
 import 'package:flutter_house_reservation/modules/ads/controllers/filter_and_search_controller.dart';
-import 'package:flutter_house_reservation/modules/ads/widgets/dropdown_custom_widget.dart';
+import 'package:flutter_house_reservation/helpers/widgets/dropdown_custom_widget.dart';
 import 'package:flutter_house_reservation/modules/ads/widgets/filter_price_slider_widget.dart';
 import 'package:flutter_house_reservation/modules/ads/widgets/select_score_item_widget.dart';
 import 'package:flutter_house_reservation/modules/ads/widgets/selected_facilities_item_widget.dart';

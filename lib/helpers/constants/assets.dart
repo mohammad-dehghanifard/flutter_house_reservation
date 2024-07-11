@@ -26,4 +26,5 @@ class Assets {
   static const avatar = "assets/jpgs/avatar.jpg";
 
   static const city = "assets/pngs/city.png";
+  static const support = "assets/pngs/support.png";
 }
