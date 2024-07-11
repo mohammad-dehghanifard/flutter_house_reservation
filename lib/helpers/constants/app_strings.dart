@@ -14,9 +14,12 @@ class AppStrings {
   static const tipTitle = 'نکته';
   static const tipText = 'اطلاعاتی که قصد تغییر آن ها را ندارید خالی بگذارید.(اطلاعات تغییری نخواهند کرد)';
   static const next = 'بعدی';
+  static const appExitMessage = 'آیا مطمئن هستید قصد خروج از برنامه را دارید؟!';
   static const sendReport = 'گزارش تخلف';
   static const reservationNow = 'همین حالا رزرو کن!';
   static const comments = 'نظرات';
+  static const exitApp = 'خروج از برنامه';
+  static const cancel = 'پشیمون شدم!';
   static const showComments = 'مشاهده نظرات';
   static const inputPhoneHint = 'شماره تماس...';
   static const inputCommentHint = 'خوشحال میشیم نظرت رو با ما و بقیه دوستات به اشتراک بزاری!';

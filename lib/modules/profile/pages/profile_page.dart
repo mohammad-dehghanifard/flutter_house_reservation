@@ -7,6 +7,7 @@ import 'package:flutter_house_reservation/modules/profile/pages/privacy_page.dar
 import 'package:flutter_house_reservation/modules/profile/pages/reservation_history_page.dart';
 import 'package:flutter_house_reservation/modules/profile/pages/support_page.dart';
 import 'package:flutter_house_reservation/modules/profile/pages/user_ads_page.dart';
+import 'package:flutter_house_reservation/modules/profile/widgets/exit_dialog_widget.dart';
 import 'package:flutter_house_reservation/modules/profile/widgets/profile_option_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
@@ -54,7 +55,7 @@ class ProfilePage extends StatelessWidget {
       ),
       // log out
       ProfileOptionWidget(
-        onTap: () {},
+        onTap: () => showDialog(context: context, builder: (context) => const ExitDialogWidget()),
         title: AppStrings.profileLogOutTitle,
         subTitle: AppStrings.profileLogOutSubTitle,
         icon: Icons.logout,
