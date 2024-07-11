@@ -25,9 +25,32 @@ class CustomNavigation extends StatelessWidget {
         children: [
           _NavItem(onTap: () => onChangePage(0), deSelectedIcon: Assets.navHome,selectedIcon: Assets.navSelectedHome, selected: selectedPage == 0),
           _NavItem(onTap: () => onChangePage(1), deSelectedIcon: Assets.navHeart,selectedIcon: Assets.navSelectedHeart, selected: selectedPage == 1),
+          _AddNewAdsButton(onTap: () {  }),
           _NavItem(onTap: () => onChangePage(2), deSelectedIcon: Assets.navMessage,selectedIcon: Assets.navSelectedMessage, selected: selectedPage == 2),
           _NavItem(onTap: () => onChangePage(3), deSelectedIcon: Assets.navProfile,selectedIcon: Assets.navSelectedProfile, selected: selectedPage == 3,iconSize: 22,),
         ],
+      ),
+    );
+  }
+}
+
+class _AddNewAdsButton extends StatelessWidget {
+  const _AddNewAdsButton({
+    super.key, required this.onTap,
+  });
+  final VoidCallback onTap;
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Container(
+        width: 40.w,
+        height: 40.h,
+        decoration: const BoxDecoration(
+          shape: BoxShape.circle,
+          color: AppColors.secondary
+        ),
+        child: const Icon(Icons.add,size: 24,),
       ),
     );
   }
