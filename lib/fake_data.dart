@@ -47,6 +47,5 @@ class FakeData {
     AdsModel(image: Assets.house2, title: "خانه باغ بزرگ همراه با استخر و جکوزی", description: lorem, score: 5, bedroom: 4, bathroom: 2, price: 950000,rentType: 'اجاره روزانه'),
     AdsModel(image: Assets.house3, title: "خانه ویلایی بزرگ و دلباز", description: '', score: 2, bedroom: 2, bathroom: 1, price: 50000000,rentType: 'اجاره سالانه'),
     AdsModel(image: Assets.house1, title: "آپارتمان 150 متری", description: lorem, score: 4, bedroom: 3, bathroom: 2, price: 900000,rentType: 'اجاره روزانه'),
-
   ];
 }

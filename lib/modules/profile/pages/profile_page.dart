@@ -4,6 +4,7 @@ import 'package:flutter_house_reservation/helpers/constants/app_strings.dart';
 import 'package:flutter_house_reservation/helpers/widgets/show_avatar_widget.dart';
 import 'package:flutter_house_reservation/modules/profile/pages/edit_user_page.dart';
 import 'package:flutter_house_reservation/modules/profile/pages/privacy_page.dart';
+import 'package:flutter_house_reservation/modules/profile/pages/reservation_history_page.dart';
 import 'package:flutter_house_reservation/modules/profile/pages/support_page.dart';
 import 'package:flutter_house_reservation/modules/profile/widgets/profile_option_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -38,7 +39,7 @@ class ProfilePage extends StatelessWidget {
       ),
       // history
       ProfileOptionWidget(
-        onTap: () {},
+        onTap: () => Get.to(const ReservationHistoryPage()),
         title: AppStrings.profileHistoryTitle,
         subTitle: AppStrings.profileHistorySubTitle,
         icon: Icons.history,

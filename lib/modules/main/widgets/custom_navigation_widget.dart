@@ -46,8 +46,14 @@ class _AddNewAdsButton extends StatelessWidget {
       child: Container(
         width: 40.w,
         height: 40.h,
-        decoration: const BoxDecoration(
+        decoration:  BoxDecoration(
           shape: BoxShape.circle,
+          boxShadow: [
+            BoxShadow(
+              color: AppColors.secondary.withOpacity(0.50),
+              blurRadius: 10
+            )
+          ],
           color: AppColors.secondary
         ),
         child: const Icon(Icons.add,size: 24,),

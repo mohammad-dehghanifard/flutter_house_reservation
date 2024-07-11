@@ -14,6 +14,7 @@ class AppStrings {
   static const tipTitle = 'نکته';
   static const tipText = 'اطلاعاتی که قصد تغییر آن ها را ندارید خالی بگذارید.(اطلاعات تغییری نخواهند کرد)';
   static const next = 'بعدی';
+  static const sendReport = 'گزارش تخلف';
   static const reservationNow = 'همین حالا رزرو کن!';
   static const comments = 'نظرات';
   static const showComments = 'مشاهده نظرات';
@@ -57,7 +58,7 @@ class AppStrings {
   static const profileSupportSubTitle = "ارسال تیکت به پشتیبانی و پیگیری مشکلات.";
   static const profilePrivacyTitle = "قوانین و مقررات";
   static const profilePrivacySubTitle = "ارسال تیکت به پشتیبانی و پیگیری مشکلات.";
-  static const profileHistoryTitle = "تاریخچه سفارشات";
+  static const profileHistoryTitle = "تاریخچه رزرو های شما";
   static const profileHistorySubTitle = "لیست تمام سفارشات ثبت شده توسط شما.";
   static const profileYourAdsTitle = "آگهی های شما";
   static const profileYourAdsSubTitle = "لیست تمام آگهی های منتشر شده توسط شما.";
