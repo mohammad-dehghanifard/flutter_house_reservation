@@ -4,7 +4,9 @@ class AppStrings {
   static const appName = 'Rentee';
   static const sendComment = 'ثبت نظر';
   static const sendTicket = 'ارسال تیکت';
+  static const callSupport = 'تماس با پشتیبانی';
   static const forceSupport = 'پشتیبانی فوری';
+  static const forceSupportMessage = 'لطفا فقط در صورتی که مشکل مهمی دارید و نمیتونید منتظر بمونید روی دکمه زیر کلیک کنید تا با پشتیبانی تماس بگیرید.';
   static const inputTicketTitleHint = 'یک عنوان برای تیکت خود وارد کنید...';
   static const inputTicketMessageHint = 'لطفا مشکل خود را به صورت خلاصه شرح دهید...';
   static const edit = 'ویرایش';

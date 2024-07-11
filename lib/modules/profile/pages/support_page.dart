@@ -5,6 +5,7 @@ import 'package:flutter_house_reservation/helpers/widgets/custom_app_bar_widget.
 import 'package:flutter_house_reservation/helpers/widgets/custom_button_widget.dart';
 import 'package:flutter_house_reservation/helpers/widgets/custom_text_field.dart';
 import 'package:flutter_house_reservation/helpers/widgets/dropdown_custom_widget.dart';
+import 'package:flutter_house_reservation/modules/profile/widgets/force_support_button_sheet.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SupportPage extends StatelessWidget {
@@ -43,7 +44,19 @@ class SupportPage extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: [
                     CustomButtonWidget(onTap: () {},text: AppStrings.sendTicket),
-                    CustomButtonWidget(onTap: () {},colorType: ButtonColorType.orange,text: AppStrings.forceSupport)
+                    CustomButtonWidget(onTap: () {
+                      showModalBottomSheet(
+                          context: context,
+                          isScrollControlled: true,
+
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.only(
+                              topRight: Radius.circular(32.r),
+                              topLeft: Radius.circular(32.r),
+                            )
+                          ),
+                          builder: (context) => const ForceSupportButtonSheet());
+                    },colorType: ButtonColorType.orange,text: AppStrings.forceSupport)
                   ],
                 ),
               )

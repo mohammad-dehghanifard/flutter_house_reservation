@@ -10,7 +10,7 @@ class AppThemes {
       primary: AppColors.primary,
       secondary: AppColors.secondary,
       background: AppColors.white,
-      primaryContainer: AppColors.darkSecondary
+      primaryContainer: AppColors.darkSecondary,
     ),
     textTheme: const TextTheme(
       bodyMedium: TextStyle(color: AppColors.darkSecondary,fontSize: 16),
