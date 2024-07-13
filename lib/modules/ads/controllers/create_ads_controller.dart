@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_house_reservation/modules/ads/pages/add_new_ads_page.dart';
+import 'package:flutter_house_reservation/modules/ads/pages/result_create_ads_page.dart';
 import 'package:get/get.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -36,7 +37,7 @@ class CreateAdsController extends GetxController {
         update();
         break;
       case CreateAdsPageState.setPrice:
-        Get.back();
+        Get.off(const ResultCreateAdsPage());
     }
   }
 

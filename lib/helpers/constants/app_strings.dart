@@ -2,10 +2,14 @@ class AppStrings {
   AppStrings._();
   static const appVersion = 'ورژن : 1.0.0';
   static const addFacilities = 'افزودن ویژگی';
+  static const resultCreateAdsAppBarTitle = 'ثبت آگهی';
+  static const resultCreateAdsSuccessTitle = 'آگهی شما ثبت شد';
+  static const resultCreateAdsSuccessMessage = 'آگهی شما با موفقیت ثبت شد و پس از تایید مدیریت نمایش داده میشود!';
   static const selectImageByCamera = 'استفاده از دوربین';
   static const selectImageByGallery = 'انتخاب از گالری';
   static const appName = 'Rentee';
   static const goNext = 'بعدی';
+  static const backToHome = 'بازگشت به صفحه اصلی';
   static const sendComment = 'ثبت نظر';
   static const addNewAdsAppBarTitle = 'افزودن آگهی جدید';
   static const sendTicket = 'ارسال تیکت';
