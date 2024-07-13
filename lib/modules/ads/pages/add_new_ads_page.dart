@@ -6,6 +6,7 @@ import 'package:flutter_house_reservation/helpers/widgets/custom_button_widget.d
 import 'package:flutter_house_reservation/helpers/widgets/custom_text_field.dart';
 import 'package:flutter_house_reservation/modules/ads/controllers/create_ads_controller.dart';
 import 'package:flutter_house_reservation/modules/ads/widgets/facilities_item_widget.dart';
+import 'package:flutter_house_reservation/modules/ads/widgets/input_ads_information_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
@@ -26,49 +27,7 @@ class AddNewAdsPage extends StatelessWidget {
           body: SingleChildScrollView(
             child: Padding(
               padding: const EdgeInsets.all(25.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  // input title
-                  const CustomTextField(label: AppStrings.inputAdsTitleLabel,hint: AppStrings.inputNewAdsTitleHint),
-                  SizedBox(height: 8.h),
-                  // input description
-                  const CustomTextField(
-                      label: AppStrings.inputAdsDescriptionLabel,
-                      hint: AppStrings.inputNewAdsDescriptionHint,
-                      maxLine: 8,
-                      hasBorder: true,
-                  ),
-                  SizedBox(height: 8.h),
-                  // input facilities
-                  Row(
-                    children: [
-                       Expanded(
-                          child: CustomTextField(
-                            controller: buildController.facilitiesTextController,
-                              label: AppStrings.inputFacilitiesLabel,
-                              hint: AppStrings.inputNewFacilitiesHint)
-                      ),
-                      SizedBox(width: 8.w),
-                      // button
-                      Padding(
-                        padding:  EdgeInsets.only(top: 24.h),
-                        child: CustomButtonWidget(
-                          colorType: ButtonColorType.orange,
-                            onTap: () => buildController.addFacilities(),
-                            text: AppStrings.addFacilities),
-                      )
-                    ],
-                  ),
-                  SizedBox(height: 12.h),
-                  // facilities list
-                  Wrap(
-                    children: List.generate(
-                        buildController.facilities.length,
-                            (index) =>  FacilitiesItemWidget(title: buildController.facilities[index])),
-                  )
-                ],
-              ),
+              child: InputAdsInformationWidget(controller: buildController),
             ),
           ),
         );
@@ -76,3 +35,7 @@ class AddNewAdsPage extends StatelessWidget {
     );
   }
 }
+
+
+
+enum CreateAdsPageState {inputInformation,selectImages}
