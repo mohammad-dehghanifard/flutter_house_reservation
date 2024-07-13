@@ -14,6 +14,7 @@ class AppStrings {
   static const forceSupportMessage = 'لطفا فقط در صورتی که مشکل مهمی دارید و نمیتونید منتظر بمونید روی دکمه زیر کلیک کنید تا با پشتیبانی تماس بگیرید.';
   static const inputTicketTitleHint = 'یک عنوان برای تیکت خود وارد کنید...';
   static const inputTicketMessageHint = 'لطفا مشکل خود را به صورت خلاصه شرح دهید...';
+  static const inputRenteePriceHint = 'مبلغ به تومان میباشد!';
   static const edit = 'ویرایش';
   static const selectDepartmentSupport = 'انتخاب واحد پشتیبانی مربوطه';
   static const tipTitle = 'نکته';
@@ -27,6 +28,7 @@ class AppStrings {
   static const cancel = 'پشیمون شدم!';
   static const inputAdsTitleLabel = 'عنوان آگهی';
   static const inputAdsDescriptionLabel = 'توضیحات آگهی';
+  static const inputAdsRenteePriceLabel = 'مبلغ اجاره';
   static const inputFacilitiesLabel = 'ویژگی های خانه شما';
   static const showComments = 'مشاهده نظرات';
   static const inputPhoneHint = 'شماره تماس...';
@@ -39,6 +41,8 @@ class AppStrings {
   static const changeFullNameHint = 'نام و نام خانوادگی جدید را وارد کنید...';
   static const changePhoneHint = 'شماره تلفن جدید را وارد کنید';
   static const sortByRentType = 'مرتب سازی بر اساس نوع اجاره';
+  static const setRentType = 'نوع اجاره را انتخاب کنید';
+  static const setPaymentType = 'روش پرداخت را انتخاب کنید';
   static const sortByPrice = 'مرتب سازی بر اساس قیمت';
   static const sortByRoom = 'مرتب سازی بر اساس تعداد اتاق';
   static const sortByScore = 'مرتب سازی بر اساس امتیاز کاربران';

@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_strings.dart';
 import 'package:flutter_house_reservation/helpers/widgets/custom_app_bar_widget.dart';
 import 'package:flutter_house_reservation/helpers/widgets/custom_button_widget.dart';
+import 'package:flutter_house_reservation/helpers/widgets/custom_text_field.dart';
+import 'package:flutter_house_reservation/helpers/widgets/dropdown_custom_widget.dart';
 import 'package:flutter_house_reservation/modules/ads/controllers/create_ads_controller.dart';
 import 'package:flutter_house_reservation/modules/ads/widgets/create_ads_selected_image_widget.dart';
 import 'package:flutter_house_reservation/modules/ads/widgets/input_ads_information_widget.dart';
@@ -31,7 +33,9 @@ class AddNewAdsPage extends StatelessWidget {
               child: buildController.pageState ==
                         CreateAdsPageState.inputInformation
                     ? InputAdsInformationWidget(controller: buildController)
-                    :  CreateAdsSelectedImageWidget(),
+                    : buildController.pageState == CreateAdsPageState.setPrice
+                        ? const SetAdsRenteeTypeAndPrice()
+                        : CreateAdsSelectedImageWidget(),
               ),
           ),
         );
@@ -47,4 +51,5 @@ class AddNewAdsPage extends StatelessWidget {
 
 
 
-enum CreateAdsPageState {inputInformation,selectImages}
+
+enum CreateAdsPageState {inputInformation,selectImages,setPrice}

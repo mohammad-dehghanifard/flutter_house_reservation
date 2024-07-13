@@ -32,6 +32,10 @@ class CreateAdsController extends GetxController {
         update();
         break;
       case CreateAdsPageState.selectImages:
+        pageState = CreateAdsPageState.setPrice;
+        update();
+        break;
+      case CreateAdsPageState.setPrice:
         // TODO: Handle this case.
     }
   }
