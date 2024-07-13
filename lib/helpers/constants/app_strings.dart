@@ -2,6 +2,8 @@ class AppStrings {
   AppStrings._();
   static const appVersion = 'ورژن : 1.0.0';
   static const addFacilities = 'افزودن ویژگی';
+  static const selectImageByCamera = 'استفاده از دوربین';
+  static const selectImageByGallery = 'انتخاب از گالری';
   static const appName = 'Rentee';
   static const goNext = 'بعدی';
   static const sendComment = 'ثبت نظر';
