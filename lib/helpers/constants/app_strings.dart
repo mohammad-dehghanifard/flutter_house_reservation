@@ -16,6 +16,7 @@ class AppStrings {
   static const inputTicketMessageHint = 'لطفا مشکل خود را به صورت خلاصه شرح دهید...';
   static const inputRenteePriceHint = 'مبلغ به تومان میباشد!';
   static const edit = 'ویرایش';
+  static const back = 'قبلی';
   static const selectDepartmentSupport = 'انتخاب واحد پشتیبانی مربوطه';
   static const tipTitle = 'نکته';
   static const tipText = 'اطلاعاتی که قصد تغییر آن ها را ندارید خالی بگذارید.(اطلاعات تغییری نخواهند کرد)';
