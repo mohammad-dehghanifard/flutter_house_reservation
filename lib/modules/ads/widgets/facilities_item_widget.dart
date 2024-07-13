@@ -5,8 +5,10 @@ import 'package:get/get.dart';
 
 class FacilitiesItemWidget extends StatelessWidget {
   const FacilitiesItemWidget({
-    super.key,
+    super.key, required this.title,
   });
+
+  final String title;
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +20,7 @@ class FacilitiesItemWidget extends StatelessWidget {
           borderRadius: BorderRadius.circular(24.r),
           color: AppColors.whiteSecondary
       ),
-      child: Text("پارکینگ",style: context.textTheme.bodySmall!.apply(color: AppColors.black),),
+      child: Text(title,style: context.textTheme.bodySmall!.apply(color: AppColors.black),),
     );
   }
 }

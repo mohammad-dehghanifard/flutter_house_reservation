@@ -144,7 +144,7 @@ class DetailAdsPage extends StatelessWidget {
                       Text(AppStrings.facilities,style: context.textTheme.titleMedium),
                       Wrap(
                         children: List.generate(5, (index) =>
-                            const FacilitiesItemWidget()
+                            const FacilitiesItemWidget(title: "پارکینگ",)
                         ),
                       ),
                       SizedBox(height: 12.h),

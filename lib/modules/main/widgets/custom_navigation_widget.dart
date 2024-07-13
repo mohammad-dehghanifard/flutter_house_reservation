@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
 import 'package:flutter_house_reservation/helpers/constants/assets.dart';
+import 'package:flutter_house_reservation/modules/ads/pages/add_new_ads_page.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:get/get.dart';
 
 class CustomNavigation extends StatelessWidget {
   const CustomNavigation({
@@ -25,7 +27,7 @@ class CustomNavigation extends StatelessWidget {
         children: [
           _NavItem(onTap: () => onChangePage(0), deSelectedIcon: Assets.navHome,selectedIcon: Assets.navSelectedHome, selected: selectedPage == 0),
           _NavItem(onTap: () => onChangePage(1), deSelectedIcon: Assets.navHeart,selectedIcon: Assets.navSelectedHeart, selected: selectedPage == 1),
-          _AddNewAdsButton(onTap: () {  }),
+          _AddNewAdsButton(onTap: () => Get.to(const AddNewAdsPage())),
           _NavItem(onTap: () => onChangePage(2), deSelectedIcon: Assets.navMessage,selectedIcon: Assets.navSelectedMessage, selected: selectedPage == 2),
           _NavItem(onTap: () => onChangePage(3), deSelectedIcon: Assets.navProfile,selectedIcon: Assets.navSelectedProfile, selected: selectedPage == 3,iconSize: 22,),
         ],

@@ -1,8 +1,11 @@
 class AppStrings {
   AppStrings._();
   static const appVersion = 'ورژن : 1.0.0';
+  static const addFacilities = 'افزودن ویژگی';
   static const appName = 'Rentee';
+  static const goNext = 'بعدی';
   static const sendComment = 'ثبت نظر';
+  static const addNewAdsAppBarTitle = 'افزودن آگهی جدید';
   static const sendTicket = 'ارسال تیکت';
   static const callSupport = 'تماس با پشتیبانی';
   static const forceSupport = 'پشتیبانی فوری';
@@ -20,11 +23,17 @@ class AppStrings {
   static const comments = 'نظرات';
   static const exitApp = 'خروج از برنامه';
   static const cancel = 'پشیمون شدم!';
+  static const inputAdsTitleLabel = 'عنوان آگهی';
+  static const inputAdsDescriptionLabel = 'توضیحات آگهی';
+  static const inputFacilitiesLabel = 'ویژگی های خانه شما';
   static const showComments = 'مشاهده نظرات';
   static const inputPhoneHint = 'شماره تماس...';
   static const inputCommentHint = 'خوشحال میشیم نظرت رو با ما و بقیه دوستات به اشتراک بزاری!';
   static const searchHint = 'متن جست و جو را وارد کنید...';
   static const changeUserNameHint = 'نام کاربری جدید را وارد کنید...';
+  static const inputNewAdsTitleHint = 'یک عنوان جذاب برای اگهی خودت وارد کن...';
+  static const inputNewFacilitiesHint = 'مثلا : پارکینگ اختصاصی';
+  static const inputNewAdsDescriptionHint = 'به صورت خلاصه و مختصر توضیحاتی درباره آگهی خود بنویسید...';
   static const changeFullNameHint = 'نام و نام خانوادگی جدید را وارد کنید...';
   static const changePhoneHint = 'شماره تلفن جدید را وارد کنید';
   static const sortByRentType = 'مرتب سازی بر اساس نوع اجاره';
