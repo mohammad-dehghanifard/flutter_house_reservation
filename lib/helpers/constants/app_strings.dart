@@ -101,7 +101,10 @@ class AppStrings {
   static const cashPaymentMethod = "پرداخت نقدی";
   static const transferPaymentMethod = "کارت به کارت";
   static const onlinePaymentMethod = "پرداخت انلاین";
-
+  static const transferCardNumberLabel = "شماره کارت";
+  static const transferCardNumberHint = "شماره کارتی که با آن پول را انتقال میدهید(جهت پیگیری)";
+  static const transferCardNameLabel = "نام صاحب کارت";
+  static const transferCardNameHint = "نام صاحب کارتی که با آن پول را انتقال میدهید(جهت پیگیری)";
 
 
   static const lorem = "لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد";
