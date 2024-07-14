@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_strings.dart';
@@ -73,21 +74,23 @@ class SetReservePaymentMethodWidget extends StatelessWidget {
             ),
             SizedBox(height: 12.h),
             // transfer card info
-            AnimatedOpacity(
-              opacity: controller.paymentMethod == PaymentMethod.transfer? 1 : 0,
-              duration: const Duration(milliseconds: 400),
-              child: Column(
-                children: [
-                  const CustomTextField(
-                    label: AppStrings.transferCardNumberLabel,
-                    hint: AppStrings.transferCardNumberHint,
-                  ),
-                  SizedBox(height: 8.h),
-                  const CustomTextField(
-                    label: AppStrings.transferCardNameLabel,
-                    hint: AppStrings.transferCardNameHint,
-                  ),
-                ],
+            RepaintBoundary(
+              child: AnimatedOpacity(
+                opacity: controller.paymentMethod == PaymentMethod.transfer? 1 : 0,
+                duration: const Duration(milliseconds: 400),
+                child: Column(
+                  children: [
+                    const CustomTextField(
+                      label: AppStrings.transferCardNumberLabel,
+                      hint: AppStrings.transferCardNumberHint,
+                    ),
+                    SizedBox(height: 8.h),
+                    const CustomTextField(
+                      label: AppStrings.transferCardNameLabel,
+                      hint: AppStrings.transferCardNameHint,
+                    ),
+                  ],
+                ),
               ),
             )
           ],

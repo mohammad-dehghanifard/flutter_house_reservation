@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_house_reservation/backend/models/ads_model.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_strings.dart';
@@ -24,8 +25,9 @@ class ReservePage extends StatelessWidget {
           bottomNavigationBar: Padding(
             padding: const EdgeInsets.all(8.0),
             child: CustomButtonWidget(
-              onTap: () {},
-              text: AppStrings.next,
+              onTap: () => controller.changePageState(),
+              colorType: controller.pageType == ReservePageType.setPaymentMethod? ButtonColorType.orange : ButtonColorType.primary,
+              text: controller.pageType == ReservePageType.setPaymentMethod? AppStrings.accept :AppStrings.next,
             ),
           ),
           body: Padding(
@@ -34,7 +36,13 @@ class ReservePage extends StatelessWidget {
               children: [
                 PopularHouseItemWidget(ads: ads),
                 SizedBox(height: 24.h),
-                controller.pageType == ReservePageType.inputInfo? SetReservePaymentMethodWidget(price: ads.price) :InputReserveInfoWidget(),
+                RepaintBoundary(
+                  child: AnimatedSwitcher(
+                    duration: const Duration(milliseconds: 500),
+                  child: controller.pageType == ReservePageType.setPaymentMethod?
+                   SetReservePaymentMethodWidget(price: ads.price) :
+                   const InputReserveInfoWidget(),),
+                )
               ],
             )),
           ),

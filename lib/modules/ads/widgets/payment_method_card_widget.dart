@@ -18,21 +18,23 @@ class PaymentMethodCardWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: AnimatedContainer(
-        duration: const Duration(milliseconds: 700),
-        width: 100.w,
-        height: 100.w,
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12.r),
-            color: selected? AppColors.lightBlue :AppColors.lightWhite
-        ),
-        child:  Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(icon,color: AppColors.greyText,size: 48,),
-            SizedBox(height: 4.h),
-            Text(text,style: context.textTheme.bodySmall)
-          ],
+      child: RepaintBoundary(
+        child: AnimatedContainer(
+          duration: const Duration(milliseconds: 700),
+          width: 100.w,
+          height: 100.w,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(12.r),
+              color: selected? AppColors.lightBlue :AppColors.lightWhite
+          ),
+          child:  Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(icon,color: AppColors.greyText,size: 48,),
+              SizedBox(height: 4.h),
+              Text(text,style: context.textTheme.bodySmall)
+            ],
+          ),
         ),
       ),
     );
