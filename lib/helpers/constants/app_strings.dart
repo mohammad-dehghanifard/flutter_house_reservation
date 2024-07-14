@@ -9,8 +9,11 @@ class AppStrings {
   static const selectImageByGallery = 'انتخاب از گالری';
   static const appName = 'Rentee';
   static const goNext = 'بعدی';
+  static const renteeTime = 'ساعت تحویل منزل';
   static const reserve = 'رزو کردن';
   static const accept = 'تایید';
+  static const renteeDate = 'تاریخ تحویل منزل';
+  static const renteePrice = 'مبلغ اجاره';
   static const timeHelper = 'مشخص کردن ساعت تحویل خانه';
   static const backToHome = 'بازگشت به صفحه اصلی';
   static const sendComment = 'ثبت نظر';
@@ -76,6 +79,7 @@ class AppStrings {
   static const previous = 'قبلی';
   static const register = 'ثبت نام';
   static const signIn = 'ورود';
+  static const selectPaymentMethod = 'روش پرداخت را انتخاب کنید';
   static const filter = 'فیلتر کردن';
   static const suggestionForYou = 'ییشنهادات برای شما';
   static const popularHouse = 'محبوبترین ها';
@@ -94,6 +98,9 @@ class AppStrings {
   static const profileYourAdsSubTitle = "لیست تمام آگهی های منتشر شده توسط شما.";
   static const profileLogOutTitle = "خروج از برنامه";
   static const profileLogOutSubTitle = "خروج از حساب کاربری.";
+  static const cashPaymentMethod = "پرداخت نقدی";
+  static const transferPaymentMethod = "کارت به کارت";
+  static const onlinePaymentMethod = "پرداخت انلاین";
 
 
 

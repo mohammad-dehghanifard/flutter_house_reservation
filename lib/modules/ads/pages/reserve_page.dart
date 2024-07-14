@@ -5,6 +5,9 @@ import 'package:flutter_house_reservation/helpers/widgets/custom_app_bar_widget.
 import 'package:flutter_house_reservation/helpers/widgets/custom_button_widget.dart';
 import 'package:flutter_house_reservation/modules/ads/controllers/reserve_controller.dart';
 import 'package:flutter_house_reservation/modules/ads/widgets/input_reserve_info_widget.dart';
+import 'package:flutter_house_reservation/modules/ads/widgets/set_reserve_payment_method_widget.dart';
+import 'package:flutter_house_reservation/modules/home/widgets/popular_house_item_widget.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 
 
@@ -27,7 +30,13 @@ class ReservePage extends StatelessWidget {
           ),
           body: Padding(
             padding: const EdgeInsets.all(25.0),
-            child: SingleChildScrollView(child: InputReserveInfoWidget(ads: ads)),
+            child: SingleChildScrollView(child: Column(
+              children: [
+                PopularHouseItemWidget(ads: ads),
+                SizedBox(height: 24.h),
+                controller.pageType == ReservePageType.inputInfo? SetReservePaymentMethodWidget(price: ads.price) :InputReserveInfoWidget(),
+              ],
+            )),
           ),
         );
       }

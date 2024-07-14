@@ -9,6 +9,7 @@ import 'package:persian_datetime_picker/persian_datetime_picker.dart';
 class ReserveController extends GetxController {
 //======================================== Variables ===========================
   ReservePageType pageType = ReservePageType.inputInfo;
+  PaymentMethod paymentMethod = PaymentMethod.online;
   final TextEditingController dateText = TextEditingController();
   final TextEditingController timeText = TextEditingController();
 //======================================== Functions ===========================
@@ -22,6 +23,11 @@ class ReserveController extends GetxController {
        pageType = ReservePageType.inputInfo;
        update();
    }
+ }
+
+ void changePaymentMethod(PaymentMethod newPaymentMethod) {
+   paymentMethod = newPaymentMethod;
+   update();
  }
 
  Future<void> reserveTimePicker(BuildContext context) async {
@@ -56,3 +62,7 @@ class ReserveController extends GetxController {
       }
  }
 }
+
+
+
+enum PaymentMethod {cash,transfer,online}

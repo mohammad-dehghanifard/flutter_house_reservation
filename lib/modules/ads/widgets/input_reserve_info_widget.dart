@@ -6,7 +6,6 @@ import 'package:flutter_house_reservation/helpers/constants/assets.dart';
 import 'package:flutter_house_reservation/helpers/constants/controllers_build_id.dart';
 import 'package:flutter_house_reservation/helpers/widgets/custom_text_field.dart';
 import 'package:flutter_house_reservation/modules/ads/controllers/reserve_controller.dart';
-import 'package:flutter_house_reservation/modules/home/widgets/popular_house_item_widget.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:persian_datetime_picker/persian_datetime_picker.dart';
@@ -14,18 +13,13 @@ import 'package:persian_datetime_picker/persian_datetime_picker.dart';
 class InputReserveInfoWidget extends StatelessWidget {
   const InputReserveInfoWidget({
     super.key,
-    required this.ads,
   });
 
-  final AdsModel ads;
 
   @override
   Widget build(BuildContext context) {
     return Column(
       children: [
-        // ads
-        PopularHouseItemWidget(ads: ads),
-        SizedBox(height: 24.h),
         // select time
         GetBuilder<ReserveController>(
           id: ControllersBuildId.reserveTime,
