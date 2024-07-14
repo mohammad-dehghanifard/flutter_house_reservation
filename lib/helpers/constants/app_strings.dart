@@ -9,6 +9,8 @@ class AppStrings {
   static const selectImageByGallery = 'انتخاب از گالری';
   static const appName = 'Rentee';
   static const goNext = 'بعدی';
+  static const resultReservePageAppBar = "نتیجه نهایی رزرو شما";
+  static const resultReservePageMessage = "درخواست رزو شما با موفقیت به مالک اعلام شد و بزودی مالک با شما تماس خواهد گرفت";
   static const renteeTime = 'ساعت تحویل منزل';
   static const reserve = 'رزو کردن';
   static const accept = 'تایید';

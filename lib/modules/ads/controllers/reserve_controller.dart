@@ -3,6 +3,7 @@ import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_strings.dart';
 import 'package:flutter_house_reservation/helpers/constants/controllers_build_id.dart';
 import 'package:flutter_house_reservation/modules/ads/pages/reserve_page.dart';
+import 'package:flutter_house_reservation/modules/ads/pages/result_reserve_page.dart';
 import 'package:get/get.dart';
 import 'package:persian_datetime_picker/persian_datetime_picker.dart';
 
@@ -20,8 +21,7 @@ class ReserveController extends GetxController {
       pageType = ReservePageType.setPaymentMethod;
       update();
      case ReservePageType.setPaymentMethod:
-       pageType = ReservePageType.inputInfo;
-       update();
+       Get.off(const ResultReservePage());
    }
  }
 

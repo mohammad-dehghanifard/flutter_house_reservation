@@ -28,6 +28,7 @@ class Assets {
   static const avatar = "assets/jpgs/avatar.jpg";
 
   static const city = "assets/pngs/city.png";
+  static const homeKey = "assets/pngs/homekey.png";
   static const support = "assets/pngs/support.png";
   static const forceSupport = "assets/pngs/forcesupport.png";
   static const houses = "assets/pngs/houses.png";
