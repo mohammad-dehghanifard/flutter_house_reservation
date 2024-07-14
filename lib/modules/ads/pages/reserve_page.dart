@@ -3,7 +3,9 @@ import 'package:flutter_house_reservation/backend/models/ads_model.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_strings.dart';
 import 'package:flutter_house_reservation/helpers/widgets/custom_app_bar_widget.dart';
 import 'package:flutter_house_reservation/helpers/widgets/custom_button_widget.dart';
+import 'package:flutter_house_reservation/modules/ads/controllers/reserve_controller.dart';
 import 'package:flutter_house_reservation/modules/ads/widgets/input_reserve_info_widget.dart';
+import 'package:get/get.dart';
 
 
 class ReservePage extends StatelessWidget {
@@ -11,19 +13,24 @@ class ReservePage extends StatelessWidget {
   final AdsModel ads;
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
-      appBar: const CustomAppBar(title: AppStrings.reserve),
-      bottomNavigationBar: Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: CustomButtonWidget(
-          onTap: () {},
-          text: AppStrings.next,
-        ),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(25.0),
-        child: InputReserveInfoWidget(ads: ads),
-      ),
+    return  GetBuilder<ReserveController>(
+      init: ReserveController(),
+      builder: (controller) {
+        return Scaffold(
+          appBar: const CustomAppBar(title: AppStrings.reserve),
+          bottomNavigationBar: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: CustomButtonWidget(
+              onTap: () {},
+              text: AppStrings.next,
+            ),
+          ),
+          body: Padding(
+            padding: const EdgeInsets.all(25.0),
+            child: SingleChildScrollView(child: InputReserveInfoWidget(ads: ads)),
+          ),
+        );
+      }
     );
   }
 }
