@@ -9,6 +9,9 @@ class AppStrings {
   static const selectImageByGallery = 'انتخاب از گالری';
   static const appName = 'Rentee';
   static const goNext = 'بعدی';
+  static const reserve = 'رزو کردن';
+  static const accept = 'تایید';
+  static const timeHelper = 'مشخص کردن ساعت تحویل خانه';
   static const backToHome = 'بازگشت به صفحه اصلی';
   static const sendComment = 'ثبت نظر';
   static const addNewAdsAppBarTitle = 'افزودن آگهی جدید';
@@ -32,6 +35,10 @@ class AppStrings {
   static const exitApp = 'خروج از برنامه';
   static const cancel = 'پشیمون شدم!';
   static const inputAdsTitleLabel = 'عنوان آگهی';
+  static const inputReserveTimeLabel = 'ساعت تحویل خونه رو مشخص کنید';
+  static const inputReserveDateLabel = 'تاریخ تحویل خونه رو مشخص کنید';
+  static const inputReserveSetMemberLabel = 'تعداد افراد را وارد کنید';
+  static const inputReserveSetMemberHint = 'مثلا : 4 نفر';
   static const inputAdsDescriptionLabel = 'توضیحات آگهی';
   static const inputAdsRenteePriceLabel = 'مبلغ اجاره';
   static const inputFacilitiesLabel = 'ویژگی های خانه شما';

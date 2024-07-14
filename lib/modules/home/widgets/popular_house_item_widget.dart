@@ -20,7 +20,6 @@ class PopularHouseItemWidget extends StatelessWidget {
       onTap: () =>  Get.to(DetailAdsPage(ads: ads)),
       child: Container(
         width: double.infinity,
-        margin: EdgeInsets.symmetric(horizontal: 25.w,vertical: 4.h),
         padding: const EdgeInsets.all(8),
         height: 100.h,
         decoration: BoxDecoration(

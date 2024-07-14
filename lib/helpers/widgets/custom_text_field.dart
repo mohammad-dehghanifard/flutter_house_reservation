@@ -13,9 +13,11 @@ class CustomTextField extends StatelessWidget {
     this.hint,
     this.showLabel = true,
     this.inputType = TextInputType.text,
-    this.validator, this.suffixIconPath,
+    this.validator,
+    this.suffixIconPath,
     this.maxLine = 1,
     this.hasBorder = false,
+    this.onTap,
   });
 
   final TextEditingController? controller;
@@ -27,6 +29,7 @@ class CustomTextField extends StatelessWidget {
   final int maxLine;
   final TextInputType inputType;
   final String? Function(String?)? validator;
+  final Function()? onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -36,6 +39,7 @@ class CustomTextField extends StatelessWidget {
         Text(label ?? "",style: context.textTheme.titleMedium!.apply(fontSizeFactor: 0.9)),
         SizedBox(height: 4.h),
         TextFormField(
+          onTap: onTap,
           maxLines: maxLine,
           controller: controller,
           keyboardType: inputType,

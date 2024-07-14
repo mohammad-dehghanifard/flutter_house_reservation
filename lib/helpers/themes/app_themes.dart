@@ -6,10 +6,12 @@ class AppThemes {
 
   static ThemeData darkTheme = ThemeData(
     fontFamily: 'yekanBakh',
-    colorScheme: const ColorScheme.dark(
+    scaffoldBackgroundColor: AppColors.white,
+    colorScheme:  ColorScheme.dark(
+
       primary: AppColors.primary,
       secondary: AppColors.secondary,
-      background: AppColors.white,
+      background: AppColors.primary.withOpacity(0.50),
       primaryContainer: AppColors.darkSecondary,
     ),
     textTheme: const TextTheme(

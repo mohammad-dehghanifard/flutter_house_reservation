@@ -16,6 +16,8 @@ class Assets {
   static const bathroom = "assets/svgs/bathroom.svg";
   static const bedroom = "assets/svgs/bedroom.svg";
   static const star = "assets/svgs/star.svg";
+  static const time = "assets/svgs/time.svg";
+  static const date = "assets/svgs/date.svg";
 
   static const onBoarding1 = "assets/jpgs/onboarding1.jpg";
   static const onBoarding2 = "assets/jpgs/onboarding2.jpg";

@@ -8,9 +8,9 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 class ReservationNowButton extends StatelessWidget {
   const ReservationNowButton({
-    super.key,
+    super.key, required this.onTap,
   });
-
+  final VoidCallback onTap;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -26,7 +26,7 @@ class ReservationNowButton extends StatelessWidget {
         children: [
           CustomButtonWidget(
               width: 220,
-              onTap: () {},
+              onTap: onTap,
               text: AppStrings.reservationNow),
           SizedBox(width: 16.w),
           // add to favorite

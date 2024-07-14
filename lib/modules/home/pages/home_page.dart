@@ -100,7 +100,10 @@ class HomePage extends StatelessWidget {
               SliverList(delegate: SliverChildBuilderDelegate(
                 childCount: FakeData.homeAdsList.length,
                 (context, index) {
-                  return  PopularHouseItemWidget(ads: FakeData.homeAdsList[index]);
+                  return  Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 25.w,vertical: 4.h),
+                    child: PopularHouseItemWidget(ads: FakeData.homeAdsList[index]),
+                  );
                 },
               )),
               // Sized box

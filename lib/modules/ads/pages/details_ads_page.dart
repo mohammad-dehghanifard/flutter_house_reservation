@@ -4,6 +4,7 @@ import 'package:flutter_house_reservation/helpers/constants/app_colors.dart';
 import 'package:flutter_house_reservation/helpers/constants/app_strings.dart';
 import 'package:flutter_house_reservation/helpers/constants/assets.dart';
 import 'package:flutter_house_reservation/modules/ads/pages/comments_page.dart';
+import 'package:flutter_house_reservation/modules/ads/pages/reserve_page.dart';
 import 'package:flutter_house_reservation/modules/ads/widgets/facilities_item_widget.dart';
 import 'package:flutter_house_reservation/modules/ads/widgets/reservation_now_button.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -16,7 +17,7 @@ class DetailAdsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
-      bottomNavigationBar: const ReservationNowButton(),
+      bottomNavigationBar:  ReservationNowButton(onTap: () => Get.to(ReservePage(ads: ads,)),),
       body: SafeArea(
           child: SingleChildScrollView(
             child: Column(
